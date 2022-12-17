@@ -1,5 +1,5 @@
 # install nix
-sh <(curl -L https://nixos.org/nix/install)
+curl -L https://nixos.org/nix/install | sh
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
@@ -16,7 +16,8 @@ nix-env -iA \
 	nixpkgs.fzf \
 	nixpkgs.ripgrep \
 	nixpkgs.bat \
-	nixpkgs.direnv
+	nixpkgs.direnv \
+    nixpkgs.cmake
 
 # stow
 stow git
