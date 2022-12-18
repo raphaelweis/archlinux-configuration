@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -119,15 +124,15 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
-  ["lspkind.nvim"] = {
+  harpoon = {
     loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/theprimeagen/harpoon"
   },
-  ["lspsaga.nvim"] = {
+  ["lsp-zero.nvim"] = {
     loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neovim-undotree"] = {
+    loaded = true,
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/neovim-undotree",
+    url = "https://github.com/sanfusu/neovim-undotree"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -183,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["typescript.nvim"] = {
-    loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   ["vim-maximizer"] = {
     loaded = true,

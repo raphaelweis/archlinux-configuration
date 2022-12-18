@@ -47,6 +47,10 @@ return packer.startup(function(use)
 
     -- file explorer
     use("nvim-tree/nvim-tree.lua")
+    use("theprimeagen/harpoon")
+
+    -- undo tree
+    use("sanfusu/neovim-undotree")
 
     -- icons
     use("kyazdani42/nvim-web-devicons")
@@ -68,17 +72,29 @@ return packer.startup(function(use)
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
 
-    -- managing & installing lsp servers
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
 
-    -- configuring lsp servers
-    use("neovim/nvim-lspconfig") -- easily configure language servers
-    use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-    use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
-    use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
-    use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-    
+    -- lsp configuration
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+    }
 
     if packer_bootstrap then
         require("packer").sync()
