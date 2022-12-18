@@ -94,16 +94,6 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -129,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["lsp-zero.nvim"] = {
-    loaded = true,
-    path = "/home/raph/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -152,6 +137,11 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
+  ["mason-null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
+    url = "https://github.com/jayp0521/mason-null-ls.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -161,6 +151,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/neovim-undotree",
     url = "https://github.com/sanfusu/neovim-undotree"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
