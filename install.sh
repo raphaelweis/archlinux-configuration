@@ -17,7 +17,8 @@ nix-env -iA \
 	nixpkgs.ripgrep \
 	nixpkgs.bat \
 	nixpkgs.direnv \
-    nixpkgs.cmake
+    nixpkgs.cmake \
+    nixpkgs.nodejs
 
 # stow
 stow git

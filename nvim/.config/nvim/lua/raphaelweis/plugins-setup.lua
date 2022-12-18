@@ -20,15 +20,28 @@ vim.cmd([[
   augroup end
 ]])
 
-local status, packer = pcall(require, "packer")
-if not status then
+-- Use a protected call so we don't error out on first use
+local status_OK, packer = pcall(require, "packer")
+if not status_OK then
     return
 end
 
+-- Have packer use a popup window
+packer.init {
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    },
+}
+
+-- Plugin installation
 return packer.startup(function(use)
+    -- Have packer manage itself
     use("wbthomason/packer.nvim")
     
     -- lua fonctions that many plugins use
+    use("nvim-lua/popup.nvim")
     use("nvim-lua/plenary.nvim")
 
     -- colorscheme
@@ -72,9 +85,11 @@ return packer.startup(function(use)
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
 
+    -- markdown preview
+    use{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" }
 
     -- lsp configuration
-    use {
+    use{
         'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
