@@ -22,7 +22,7 @@ opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
 
--- turn on termguicolors for nightfly colorscheme to work
+-- turn on termguicolors for colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
@@ -39,3 +39,6 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
+
+-- hide mode because of lualine plugin
+opt.showmode = false
