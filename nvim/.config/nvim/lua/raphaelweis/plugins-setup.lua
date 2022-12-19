@@ -117,6 +117,9 @@ return packer.startup(function(use)
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
 
+	-- which key plugin
+	use("folke/which-key.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
