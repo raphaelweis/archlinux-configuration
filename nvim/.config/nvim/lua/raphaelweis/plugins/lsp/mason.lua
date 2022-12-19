@@ -1,17 +1,22 @@
+-- import mason plugin safely
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
-    return
+  return
 end
 
-local mason_lsp_config_status, mason_lsp_config = pcall(require, "mason-lspconfig")
+-- import mason-lspconfig plugin safely
+local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_status then
-    return
+  return
 end
 
+-- enable mason
 mason.setup()
 
-mason_lsp_config.setup({
-    ensure_installed = {
+mason_lspconfig.setup({
+  -- list of servers for mason to install
+  ensure_installed = {
     "sumneko_lua",
-    }
+  }
 })
+
