@@ -74,6 +74,9 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
+	-- start menu
+	use("mhinz/vim-startify")
+
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
@@ -85,7 +88,10 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- markdown preview
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
 	-- managing and installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim")
@@ -119,6 +125,9 @@ return packer.startup(function(use)
 
 	-- which key plugin
 	use("folke/which-key.nvim")
+
+	-- java additionnal support over basic lsp
+	use("mfussenegger/nvim-jdtls")
 
 	if packer_bootstrap then
 		require("packer").sync()
