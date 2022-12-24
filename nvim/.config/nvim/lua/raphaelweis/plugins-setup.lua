@@ -88,10 +88,12 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- markdown preview
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
 	-- managing and installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim")

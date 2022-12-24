@@ -18,6 +18,7 @@ require("raphaelweis.plugins.lsp.mason") --lsp
 require("raphaelweis.plugins.lsp.lspsaga") --lsp
 require("raphaelweis.plugins.lsp.lspconfig") --lsp
 require("raphaelweis.plugins.lsp.null-ls") --lsp
+require("raphaelweis.plugins.lsp.java") --lsp / java support
 require("raphaelweis.plugins.autopairs")
 require("raphaelweis.plugins.treesitter")
 require("raphaelweis.plugins.gitsigns")
