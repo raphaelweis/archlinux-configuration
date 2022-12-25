@@ -4,6 +4,7 @@ if not nvim_jdtls_status then
 	return
 end
 
+-- for data folder / see documentation
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = "/path/to/workspace-root/" .. project_name
 
