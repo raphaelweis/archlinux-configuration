@@ -43,7 +43,7 @@ local config = {
 
 		-- 💀
 		-- See `data directory configuration` section in the README
-		"-data",
+		"--data",
 		workspace_dir,
 	},
 
