@@ -18,11 +18,12 @@ alias ls='ls -al'
 alias vim="nvim"
 
 # use nix
-if [ -e /home/raph/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raph/.nix-profile/etc/profile.d/nix.sh; fi
+if [ -e /home/raph/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raph/.nix-profile/etc/profile.d/nix.sh;
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export LC_ALL = C
-export LANG = C
-export LANGUAGE = C
+export LC_ALL =C
+export LANG =C
+export LANGUAGE =C
