@@ -7,10 +7,11 @@ end
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
-nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
+---@diagnostic disable-next-line: need-check-nil
+nvimtree.setup({
 	auto_reload_on_write = true,
 	disable_netrw = false,
-	hijack_cursor = true,
+	hijack_cursor = false,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
 	ignore_buffer_on_setup = false,
@@ -128,7 +129,7 @@ nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
 		args = {},
 	},
 	diagnostics = {
-		enable = false,
+		enable = true,
 		show_on_dirs = false,
 		show_on_open_dirs = true,
 		debounce_delay = 50,
@@ -183,7 +184,7 @@ nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
 			},
 		},
 		open_file = {
-			quit_on_open = false,
+			quit_on_open = true,
 			resize_window = true,
 			window_picker = {
 				enable = true,
@@ -231,4 +232,4 @@ nvimtree.setup({ -- BEGIN_DEFAULT_OPTS
 			watcher = false,
 		},
 	},
-}) -- END_DEFAULT_OPTS
+})
