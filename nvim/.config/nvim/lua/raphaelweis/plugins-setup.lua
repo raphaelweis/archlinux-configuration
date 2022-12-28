@@ -125,6 +125,9 @@ return packer.startup(function(use)
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
 
+	-- fugitive.vim for git management
+	use("tpope/vim-fugitive")
+
 	-- which key plugin
 	use("folke/which-key.nvim")
 
