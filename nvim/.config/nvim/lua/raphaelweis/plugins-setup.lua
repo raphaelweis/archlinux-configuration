@@ -70,12 +70,16 @@ return packer.startup(function(use)
 
 	--status line
 	use("nvim-lualine/lualine.nvim")
+
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
 	-- start menu
 	use("mhinz/vim-startify")
+
+	-- tabs
+	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
