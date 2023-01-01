@@ -19,7 +19,8 @@ nix-env -iA \
 	nixpkgs.direnv \
     nixpkgs.cmake \
     nixpkgs.unzip \
-    nixpkgs.nodejs
+    nixpkgs.nodejs \
+    nixpkgs.sshs
 
 # stow
 stow git
