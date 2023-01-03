@@ -18,6 +18,7 @@ nix-env -iA \
 	nixpkgs.bat \
 	nixpkgs.direnv \
     nixpkgs.cmake \
+    nixpkgs.gcc \
     nixpkgs.unzip \
     nixpkgs.nodejs \
     nixpkgs.sshs

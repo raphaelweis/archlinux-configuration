@@ -5,7 +5,6 @@ if not cmp_nvim_r_status then
 end
 
 cmp_nvim_r.setup({
-	sources = {
-		{ name = "cmp_nvim_r" },
-	},
+	filetypes = { "r", "rmd", "quarto" },
+	doc_width = 58,
 })
