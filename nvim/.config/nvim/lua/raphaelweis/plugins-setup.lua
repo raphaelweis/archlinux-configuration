@@ -138,6 +138,10 @@ return packer.startup(function(use)
 	-- java additionnal support over basic lsp
 	use("mfussenegger/nvim-jdtls")
 
+	-- additionnal support for R
+	use("jalvesaq/cmp-nvim-r")
+	use("jalvesaq/Nvim-R")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
