@@ -25,3 +25,5 @@ require("raphaelweis.plugins.autopairs")
 require("raphaelweis.plugins.treesitter")
 require("raphaelweis.plugins.gitsigns")
 require("raphaelweis.plugins.which-key")
+
+vim.api.nvim_set_var("mkdp_command_for_global", "1")
