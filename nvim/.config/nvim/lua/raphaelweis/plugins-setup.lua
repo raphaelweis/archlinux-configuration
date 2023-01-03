@@ -142,6 +142,9 @@ return packer.startup(function(use)
 	use("jalvesaq/cmp-nvim-r")
 	use("jalvesaq/Nvim-R")
 
+    -- sudo mode for nvim
+    use("lambdalisue/suda.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

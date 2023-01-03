@@ -246,6 +246,11 @@ _G.packer_plugins = {
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/raph/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/raph/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
