@@ -73,8 +73,10 @@ return packer.startup(function(use)
 
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
 	-- start menu
 	use("mhinz/vim-startify")
 
@@ -142,8 +144,8 @@ return packer.startup(function(use)
 	use("jalvesaq/cmp-nvim-r")
 	use("jalvesaq/Nvim-R")
 
-    -- sudo mode for nvim
-    use("lambdalisue/suda.vim")
+	-- sudo mode for nvim
+	use("lambdalisue/suda.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
