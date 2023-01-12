@@ -17,11 +17,11 @@ nix-env -iA \
 	nixpkgs.ripgrep \
 	nixpkgs.bat \
 	nixpkgs.direnv \
-    nixpkgs.cmake \
-    nixpkgs.gcc \
-    nixpkgs.unzip \
-    nixpkgs.nodejs \
-    nixpkgs.sshs
+    	nixpkgs.cmake \
+    	nixpkgs.gcc \
+	nixpkgs.gpp \
+    	nixpkgs.unzip \
+    	nixpkgs.nodejs \
 
 # stow
 stow git
