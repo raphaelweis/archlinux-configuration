@@ -8,20 +8,9 @@ curl -L https://nixos.org/nix/install | sh
 nix-env -iA \
 	nixpkgs.zsh \
 	nixpkgs.antibody \
-	nixpkgs.git \
 	nixpkgs.neovim \
 	nixpkgs.tmux \
 	nixpkgs.stow \
-	nixpkgs.yarn \
-	nixpkgs.fzf \
-	nixpkgs.ripgrep \
-	nixpkgs.bat \
-	nixpkgs.direnv \
-    	nixpkgs.cmake \
-    	nixpkgs.gcc \
-	nixpkgs.gpp \
-    	nixpkgs.unzip \
-    	nixpkgs.nodejs \
 
 # stow
 stow git
