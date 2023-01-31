@@ -25,3 +25,6 @@ sudo chsh -s $(which zsh) $USER
 
 # bundle zsh plugins
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+
+# logout the user and kill processes (fix for fedora)
+#pkill -KILL -u $USER
