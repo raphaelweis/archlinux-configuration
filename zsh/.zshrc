@@ -24,3 +24,5 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ -e /home/raphael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raphael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+if [ -e /home/raphaelw/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raphaelw/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
