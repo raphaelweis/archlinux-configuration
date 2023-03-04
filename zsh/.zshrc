@@ -5,24 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Export nvm completion settings for lukechilds/zsh-nvm plugin
-# Note: This must be exported before the plugin is bundled
-export NVM_DIR=${HOME}/.nvm
-export NVM_COMPLETION=true
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd extendedglob
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/raphaelw/.zshrc'
 
-# source plugins
-source ~/.zsh_plugins.sh
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
-# aliases
-alias ls='ls -al'
-
-# use nix
-if [ -e /home/raph/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raph/.nix-profile/etc/profile.d/nix.sh;
-fi
+export PATH=/home/raphaelw/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-if [ -e /home/raphael/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raphael/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-if [ -e /home/raphaelw/.nix-profile/etc/profile.d/nix.sh ]; then . /home/raphaelw/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
