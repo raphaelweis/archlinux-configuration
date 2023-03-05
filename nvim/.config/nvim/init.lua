@@ -210,7 +210,7 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]]) -- from documentation
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "java", "vim", "html", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
+	ensure_installed = { "c", "lua", "java", "vim", "html", "json", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
 	highlight = { enable = true }, -- enable better syntax highlighting
 	autotag = { enable = true }, -- automatic closing for html tags
 })

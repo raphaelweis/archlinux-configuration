@@ -46,11 +46,6 @@ bindkey -v
 
 alias la='ls -la'
 alias vim='nvim'
-alias nvim-conf='$HOME/.config/nvim'
-alias hypr-conf='$HOME/.config/hypr'
-alias git-conf='$HOME/.config/git'
-alias alacritty-conf='$HOME/.config/alacritty'
-alias nvim-conf='$HOME/.config/zsh'
 
 #######################################
 # Environment Variables 
