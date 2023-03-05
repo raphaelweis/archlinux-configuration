@@ -18,7 +18,7 @@ colors:
     white: "0xd3d7cf"
     yellow: "0xc4a000"
   primary:
-    background: "0x2e3436"
+    background: "0x000000"
     foreground: "0xd3d7cf"
 cursor:
   style:
@@ -43,4 +43,4 @@ window:
   padding:
     x: 10
     y: 10
-  opacity: 0.8
+  opacity: 0.7
