@@ -1,6 +1,5 @@
 [user]
 	email = raphael.weis.2003@gmail.com
 	name = Raphaël Weis
-	signingkey = 95DB4BA656341B09
 [init]
 	defaultBranch = main
