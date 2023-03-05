@@ -86,7 +86,7 @@ vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from au
 local colorschemeConfig = function() -- configuration for gruvbox.nvim plugin (main colorscheme)
 	require("gruvbox").setup({
 		italic = false, -- disable displaying comments and strings in italic
-		transparent_mode = false, -- enable or disable colored background that is specific to neovim (also affects things like terminal mode)
+		transparent_mode = true, -- enable or disable colored background that is specific to neovim (also affects things like terminal mode)
 	})
 	vim.cmd("colorscheme gruvbox") -- set colorscheme
 end
@@ -209,7 +209,7 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]]) -- from documentation
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "java", "vim", "nix", "html", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
+	ensure_installed = { "c", "lua", "java", "vim", "html", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
 	highlight = { enable = true }, -- enable better syntax highlighting
 	autotag = { enable = true }, -- automatic closing for html tags
 })
@@ -221,7 +221,7 @@ require("telescope").load_extension("fzf") -- load fzf extension
 -- mason
 require("mason").setup() -- package manager
 require("mason-lspconfig").setup({ -- brigde for lsp
-	ensure_installed = { "lua_ls", "clangd", "jdtls", "vimls", "nil_ls", "html", "marksman" }, -- automatic installation of language servers
+	ensure_installed = { "lua_ls", "clangd", "jdtls", "vimls", "html", "marksman" }, -- automatic installation of language servers
 })
 require("mason-null-ls").setup({ -- bridge for formatters and linters
 	ensure_installed = { "prettier", "stylua", "clang-format" }, -- automatic installation of formatters and linters
