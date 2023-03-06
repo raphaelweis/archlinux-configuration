@@ -210,7 +210,7 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]]) -- from documentation
 
 -- nvim-treesitter
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "java", "vim", "html", "json", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
+	ensure_installed = { "c", "lua", "java", "vim", "html", "css", "json", "markdown", "markdown_inline", "help" }, -- ensure these treesitter parsers are installed
 	highlight = { enable = true }, -- enable better syntax highlighting
 	autotag = { enable = true }, -- automatic closing for html tags
 })
@@ -222,7 +222,7 @@ require("telescope").load_extension("fzf") -- load fzf extension
 -- mason
 require("mason").setup() -- package manager
 require("mason-lspconfig").setup({ -- brigde for lsp
-	ensure_installed = { "lua_ls", "clangd", "jdtls", "vimls", "html", "marksman" }, -- automatic installation of language servers
+	ensure_installed = { "lua_ls", "clangd", "jdtls", "vimls", "html", "cssls", "marksman" }, -- automatic installation of language servers
 })
 require("mason-null-ls").setup({ -- bridge for formatters and linters
 	ensure_installed = { "prettier", "stylua", "clang-format" }, -- automatic installation of formatters and linters
@@ -308,6 +308,10 @@ require("lspconfig")["marksman"].setup({ -- Markdown language server config
 	on_attach = on_attach,
 })
 require("lspconfig")["html"].setup({ -- HTML language server config
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+require("lspconfig")["cssls"].setup({ -- CSS language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
