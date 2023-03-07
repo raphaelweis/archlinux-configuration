@@ -14,13 +14,13 @@ fi
 #######################################
 
 # source antidote
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source ~/.antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
 # source zsh theme (powerlevel10k)
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 #######################################
 # General Configuration
@@ -52,4 +52,5 @@ alias vim='nvim'
 #######################################
 
 #
-export PATH=/home/raphaelw/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export ZDOTDIR=~/.config/zsh
