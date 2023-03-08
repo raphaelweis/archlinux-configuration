@@ -334,3 +334,18 @@ require("lspconfig")["tsserver"].setup({ -- Javascript language server config
 
 -- lspsaga
 require("lspsaga").setup()
+
+-----------------------------
+-- Extra
+-----------------------------
+
+-- get rid of the following warning concerning null-ls,
+-- see : https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+local notify = vim.notify
+vim.notify = function(msg, ...)
+	if msg:match("warning: multiple different client offset_encodings") then
+		return
+	end
+
+	notify(msg, ...)
+end
