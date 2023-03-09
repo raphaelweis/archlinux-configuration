@@ -46,6 +46,7 @@ bindkey -v
 
 alias la='ls -la'
 alias vim='nvim'
+alias gc='git checkout' # for faster git navigation
 
 #######################################
 # Environment Variables 
