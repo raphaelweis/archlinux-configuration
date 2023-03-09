@@ -14,13 +14,13 @@ fi
 #######################################
 
 # source antidote
-source ~/.antidote/antidote.zsh
+source $ZDOTDIR/.antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
 # source zsh theme (powerlevel10k)
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 #######################################
 # General Configuration
@@ -54,4 +54,3 @@ alias gc='git checkout' # for faster git navigation
 
 #
 export PATH=~/.local/bin:$PATH
-export ZDOTDIR=~/.config/zsh
