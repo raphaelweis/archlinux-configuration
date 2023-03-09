@@ -1,7 +1,7 @@
 ----------------------------
 -- Keymaps --
 ----------------------------
-
+--bonjour
 -- leader key definition
 vim.g.mapleader = " " -- define space as leader key
 
