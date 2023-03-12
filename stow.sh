@@ -4,3 +4,4 @@ stow hyprland
 stow nvim
 stow waybar
 stow zsh
+stow mpd
