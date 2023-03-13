@@ -90,7 +90,7 @@
     "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "{used}GiB "
   },
   "temperature": {
     // "thermal-zone": 2,
