@@ -8,15 +8,13 @@
   "modules-center": ["clock"],
   "modules-right": [
     "mpd",
-    "idle_inhibitor",
     "pulseaudio",
     "network",
     "cpu",
     "memory",
     "temperature",
     "keyboard-state",
-    "battery",
-    "tray"
+    "battery"
   ],
   // Modules configuration
   "wlr/workspaces": {
@@ -24,7 +22,7 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "sort-by-number": true,
+    "sort-by-number": true
   },
   "keyboard-state": {
     "numlock": true,
@@ -109,7 +107,6 @@
   },
   "battery": {
     "states": {
-      // "good": 95,
       "warning": 30,
       "critical": 10
     },
@@ -126,7 +123,7 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{essid} ",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
