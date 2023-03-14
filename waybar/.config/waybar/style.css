@@ -2,7 +2,6 @@
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: FontAwesome, Roboto, Helvetica, Arial, monospace; */
   font-family: "MesloLGS Nerd Font";
-  font-weight: 500;
   font-size: 13px;
 }
 
@@ -89,7 +88,9 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#keyboard-state,
 #mpd {
+  border-radius: 5px;
   padding: 0 10px;
   color: #ffffff;
 }
