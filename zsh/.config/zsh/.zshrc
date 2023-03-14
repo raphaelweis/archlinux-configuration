@@ -47,3 +47,4 @@ bindkey -v
 alias la='ls -la'
 alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
+alias bonjour='cowsay bonjour' # absolutely capital
