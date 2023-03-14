@@ -3,5 +3,6 @@
         "vim",
         "colorschemeConfig",
         "cmpKeymaps"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
