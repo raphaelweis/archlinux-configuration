@@ -25,23 +25,12 @@
     "sort-by-number": true
   },
   "keyboard-state": {
-    "numlock": true,
     "capslock": true,
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
       "unlocked": ""
     }
-  },
-  "wlr/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "wlr/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": ["", ""],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
   },
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -132,15 +121,15 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}/ {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "headphone": "\uf025",
+      "hands-free": "\uf025",
+      "headset": "\uf025",
       "phone": "",
       "portable": "",
       "car": "",

@@ -1,11 +1,11 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  /* font-family: FontAwesome, Roboto, Helvetica, Arial, monospace; */
-  font-family: "MesloLGS Nerd Font";
-  font-size: 13px;
+  font-family: FontAwesome, sans-serif;
+  font-size: 15px;
 }
 
 window#waybar {
+  border-radius: 40px;
   background-color: rgba(43, 48, 59, 0.5);
   border-bottom: 0px solid rgba(100, 114, 125, 0.5);
   color: #ffffff;
@@ -15,14 +15,6 @@ window#waybar {
 window#waybar.hidden {
   opacity: 0.2;
 }
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 window#waybar.termite {
   background-color: #3f3f3f;
 }
@@ -63,10 +55,13 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#keyboard-state,
 #mpd {
+  background-color: #90b1b1;
   border-radius: 5px;
   padding: 0 10px;
-  color: #ffffff;
+  margin: 0 20px;
+  color: #000000;
 }
 
 #workspaces button {
@@ -91,15 +86,11 @@ button:hover {
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+  margin-left: 20px;
 }
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
-
-#clock {
-  background-color: #64727d;
+/* If keyboard-state is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #keyboard-state {
+  margin-right: 20px;
 }
 
 label:focus {
@@ -107,47 +98,22 @@ label:focus {
 }
 
 #cpu {
-  background-color: #2ecc71;
   color: #000000;
 }
 
-#memory {
-  background-color: #9b59b6;
-}
-
-#disk {
-  background-color: #964b00;
-}
-
-#backlight {
-  background-color: #90b1b1;
-}
-
-#network {
-  background-color: #2980b9;
-}
 #network.disconnected {
   background-color: #f53c3c;
 }
 
-#pulseaudio {
-  background-color: #f1c40f;
-  color: #000000;
-}
 #pulseaudio.muted {
-  background-color: #90b1b1;
   color: #2a5c45;
 }
 
-#temperature {
-  background-color: #f0932b;
-}
 #temperature.critical {
   background-color: #eb4d4b;
 }
 
 #mpd {
-  background-color: #66cc99;
   color: #2a5c45;
 }
 #mpd.disconnected {
@@ -161,10 +127,7 @@ label:focus {
 }
 
 #keyboard-state {
-  padding: 0 0px;
-  background: #97e1ad;
-  color: #000000;
-  border-radius: 5px;
+  padding: 0;
 }
 #keyboard-state > label {
   padding: 0 10px;
