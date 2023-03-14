@@ -195,6 +195,7 @@ label:focus {
 }
 #keyboard-state > label {
   padding: 0 10px;
+  border-radius: 5px;
 }
 #keyboard-state > label.locked {
   background: rgb(220, 20, 60);
