@@ -13,8 +13,7 @@
     "cpu",
     "memory",
     "temperature",
-    "keyboard-state",
-    "tray"
+    "keyboard-state"
   ],
   // Modules configuration
   "wlr/workspaces": {
