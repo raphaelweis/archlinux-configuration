@@ -2,6 +2,8 @@ require("core.colorscheme")
 require("core.keymaps")
 require("core.options")
 
+require("misc.misc")
+
 require("plugins.plugins-declaration")
 require("plugins.conf.alpha-nvim.alpha-nvim")
 require("plugins.conf.comment.comment")
