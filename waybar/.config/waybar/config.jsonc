@@ -86,12 +86,12 @@
     "format-alt": "{:%Y-%m-%d}"
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage:2}% ",
     "tooltip": false
   },
   "memory": {
     "interval": 1,
-    "format": "{used}GiB "
+    "format": "{used:5}GiB "
   },
   "temperature": {
     "critical-threshold": 80,
@@ -115,9 +115,6 @@
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
