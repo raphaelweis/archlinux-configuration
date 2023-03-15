@@ -20,3 +20,13 @@ null_ls.setup({ -- formatters and linters
 		end
 	end,
 })
+
+-- TODO : look into the problem source - ignore warning for now
+local notify = vim.notify
+vim.notify = function(msg, ...)
+	if msg:match("warning: multiple different client offset_encodings") then
+		return
+	end
+
+	notify(msg, ...)
+end
