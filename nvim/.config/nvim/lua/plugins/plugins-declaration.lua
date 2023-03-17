@@ -73,6 +73,8 @@ local plugins = {
 		event = "BufRead",
 		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
 	},
+	-- vimscript plugins
+	{ "elkowar/yuck.vim" },
 }
 
 -- options table
