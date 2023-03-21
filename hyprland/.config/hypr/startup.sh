@@ -1,1 +1,3 @@
-exec Hyprland
+#!/bin/sh
+
+exec Hyprland #launch hyprland
