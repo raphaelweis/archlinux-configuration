@@ -15,10 +15,16 @@ vim.opt.rtp:prepend(lazypath)
 -- plugins table
 local plugins = {
 	{
-		"ellisonleao/gruvbox.nvim", -- colorscheme plugin (currently main colorscheme)
+		"ellisonleao/gruvbox.nvim", -- colorscheme plugin 1
 		lazy = false,
 		priority = 1000, -- to ensure that the colorscheme gets loaded first
-		config = colorschemeConfig, -- plugin configuration call
+		config = GruvboxConfig, -- plugin configuration call
+	},
+	{
+		"folke/tokyonight.nvim", -- colorscheme plugin 2
+		lazy = false,
+		priority = 1000, -- to ensure that the colorscheme gets loaded first
+		config = TokyonightConfig, -- plugin configuration call
 	},
 	{ "folke/which-key.nvim" }, -- pop-up menu that shows possible keybinds after pressing a key
 	{ "windwp/nvim-autopairs" }, -- automatically insert closing brackets, parenthesis, quotes, etc
