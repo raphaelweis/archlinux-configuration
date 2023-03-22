@@ -1,1 +1,1 @@
-$HOME/.config/hypr/startup.sh
+$HOME/.config/hypr/starth.sh
