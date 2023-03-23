@@ -1,15 +1,21 @@
 * {
   all: unset; //Unsets everything so you can style everything from scratch
+  font-family: "MesloLGS Nerd Font";
 }
 
 //Global Styles
 .bar {
   background-color: #3a3a3a;
-  color: #b0b4bc;
-  padding: 10px;
+  border: 2px solid #000000;
 }
 
 // Styles on classes (see eww.yuck for more information)
+.sidestuff {
+  margin-right: 10px;
+}
+.workspaces {
+  margin-left: 10px;
+}
 
 .sidestuff slider {
   all: unset;
