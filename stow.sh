@@ -6,3 +6,4 @@ stow waybar
 stow eww
 stow zsh
 stow mpd
+stow gtk-3.0
