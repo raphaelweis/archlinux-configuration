@@ -68,9 +68,10 @@
   :monitor 0
   :exclusive true
   :windowtype "dock"
-  :geometry (geometry :x "0%"
+  :geometry (geometry :x "0px"
                       :y "10px"
-                      :width "3420px"
+                      :width "1515px"
                       :height "30px"
                       :anchor "top center")
+  :reserve (struts :side "top" :distance "4%")
   (bar))
