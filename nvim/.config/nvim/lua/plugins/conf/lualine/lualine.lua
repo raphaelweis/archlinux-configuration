@@ -1,2 +1,6 @@
 -- lualine
-require("lualine").setup() -- load lualine
+require("lualine").setup({
+	options = {
+		theme = "tokyonight",
+	},
+})
