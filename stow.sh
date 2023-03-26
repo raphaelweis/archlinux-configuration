@@ -1,19 +1,15 @@
+#!/bin/sh
+
 # stow hosts first
 if [ "$(hostname)" = "archlinux-desktop" ]; then
   # stow package for desktop
-  cd desktop
-  stow hyprland -t ~/
-  cd ..
+  stow desktop -t ~/.config
 elif [ "$(hostname)" = "archlinux-laptop" ]; then
   # stow packages for laptop
-  cd laptop
-  stow * -t ~/
-  cd ..
+  stow laptop -t ~/.config
 else
   echo "Unknown host: $(hostname)"
 fi
 
 # stow main second
-cd main
-stow hyprland -t ~/
-cd ..
+stow main -t ~/.config
