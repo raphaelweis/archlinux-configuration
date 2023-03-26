@@ -1,13 +1,19 @@
+-- core functionality
 require("core.colorscheme")
 require("core.keymaps")
 require("core.options")
 
+-- miscellaneous
 require("misc.misc")
 
+-- plugins
 require("plugins.plugins-declaration")
+
 require("plugins.conf.alpha-nvim.alpha-nvim")
+require("plugins.conf.bufferline.bufferline")
 require("plugins.conf.comment.comment")
 require("plugins.conf.gitsigns.gitsigns")
+require("plugins.conf.indent-blankline.indent-blankline")
 require("plugins.conf.lspsaga.lspsaga")
 require("plugins.conf.lualine.lualine")
 require("plugins.conf.mason.mason")

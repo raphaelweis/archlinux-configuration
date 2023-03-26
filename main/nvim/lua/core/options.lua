@@ -12,5 +12,7 @@ vim.opt.shiftwidth = 2 -- indentation = 2 spaces
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.autoindent = true -- copy indent from current line when going to a new line
 vim.opt.wrap = false -- lines that are too long will not get cut to show on the line under them
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from automatically commenting new lines
+
+-- else
+vim.opt.mousemoveevent = true -- for bufferline - might cause problems

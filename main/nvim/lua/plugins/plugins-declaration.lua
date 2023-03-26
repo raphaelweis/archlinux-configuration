@@ -85,6 +85,9 @@ local plugins = {
 	{ "folke/neodev.nvim" }, -- completion and documentation for lua neovim config and API's
 	{ "lewis6991/gitsigns.nvim" }, -- git decoration on sidebar
 	{ "ahmedkhalf/project.nvim" }, -- project management plugin
+	{ "akinsho/bufferline.nvim" }, -- bufferline with tabs
+	{ "lukas-reineke/indent-blankline.nvim" }, -- indent guides (like in vs code)
+
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" },
 }

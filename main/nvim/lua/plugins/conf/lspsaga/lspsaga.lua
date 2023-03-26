@@ -1,2 +1,6 @@
 -- lspsaga
-require("lspsaga").setup()
+require("lspsaga").setup({
+	symbol_in_winbar = {
+		show_file = false,
+	},
+})
