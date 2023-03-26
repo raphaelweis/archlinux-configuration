@@ -2,7 +2,7 @@
 if [ "$(hostname)" = "archlinux-desktop" ]; then
   # stow package for desktop
   cd desktop
-  stow * -t ~/
+  stow hyprland -t ~/
   cd ..
 elif [ "$(hostname)" = "archlinux-laptop" ]; then
   # stow packages for laptop
@@ -15,5 +15,5 @@ fi
 
 # stow main second
 cd main
-stow * -t ~/
+stow hyprland -t ~/
 cd ..
