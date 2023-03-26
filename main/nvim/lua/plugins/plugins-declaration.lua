@@ -44,7 +44,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter", -- better syntax highlighting (among other things)
 		build = ":TSUpdate",
-		dependencies = "windwp/nvim-ts-autotag",
+		dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
 	},
 	{
 		"nvim-telescope/telescope.nvim", -- fuzzy finder for neovim
@@ -66,6 +66,7 @@ local plugins = {
 			"L3MON4D3/LuaSnip",
 		},
 	},
+	{ "rafamadriz/friendly-snippets" },
 	{
 		"williamboman/mason.nvim", -- gui for managing language servers, formatters and linters
 		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
@@ -79,6 +80,11 @@ local plugins = {
 		event = "BufRead",
 		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
 	},
+	{ "Tastyep/structlog.nvim" }, -- more structured login messages
+	{ "rcarriga/nvim-notify" }, -- notifications
+	{ "folke/neodev.nvim" }, -- completion and documentation for lua neovim config and API's
+	{ "lewis6991/gitsigns.nvim" }, -- git decoration on sidebar
+	{ "ahmedkhalf/project.nvim" }, -- project management plugin
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" },
 }

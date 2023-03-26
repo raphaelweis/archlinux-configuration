@@ -14,6 +14,9 @@ cmp.setup({ -- load cmp completion
 	}),
 })
 
+-- load vs-code snippets from plugins (example : from friendly-snippets)
+require("luasnip/loaders/from_vscode").lazy_load()
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities() -- from documentation
 local on_attach = function(client, bufnr) -- to make sure that the following keybinds are not active when the language server is not installed
 	LSPKeymaps({ noremap = true, silent = true, buffer = bufnr }) -- passing of the options table as an argument
