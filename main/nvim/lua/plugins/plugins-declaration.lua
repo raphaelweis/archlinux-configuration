@@ -71,6 +71,7 @@ local plugins = {
 		"williamboman/mason.nvim", -- gui for managing language servers, formatters and linters
 		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
 	},
+	{ "mfussenegger/nvim-dap" }, -- nvim DAP - debug adapter protocol
 	{
 		"jose-elias-alvarez/null-ls.nvim", -- formatters and linters installation and configuration
 		dependencies = "jay-babu/mason-null-ls.nvim",
