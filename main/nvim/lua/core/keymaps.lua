@@ -26,7 +26,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>") -- toggle + focu
 
 vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<CR>") -- toggle terminal inside neovim (available in normal and terminal mode)
 
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy finder
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<CR>") -- fuzzy finder with hidden files
 
 cmpKeymaps = function(cmp) -- keymaps for viewing and accepting autocompletion propositions
 	return cmp.mapping.preset.insert({
