@@ -1,2 +1,0 @@
--- lspsaga
-require("lspsaga").setup()
