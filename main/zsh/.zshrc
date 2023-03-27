@@ -49,6 +49,10 @@ alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#######################################
+# Environment variables
+#######################################
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local"
+export XDG_CACHE_HOME="$HOME/.cache"
