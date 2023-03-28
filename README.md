@@ -8,7 +8,8 @@
   - [Desktop environment](#desktop-environment)
   - [Development environment](#development-environment)
   - [Dotfile management strategy](#dotfile-management-strategy)
-  <!--toc:end-->
+- [Dependencies](#dependencies)
+<!--toc:end-->
 
 Hello, my name is Raphaël. I am a French student in Reims, France, currently
 studying for a engineering degree in computer science, specialized in embedded system
@@ -35,3 +36,7 @@ I do keep an eye on NixOS though, which I've tried with mitigated success to set
 ### Development environment
 
 ### Dotfile management strategy
+
+## Dependencies
+
+Gnu Stow...
