@@ -2,14 +2,13 @@
 
 <!--toc:start-->
 
-- [My Linux Rice](#my-linux-rice)
-  - [Setup](#setup)
-    - [Hardware](#hardware)
-    - [OS](#os)
-    - [Desktop environment](#desktop-environment)
-    - [Development environment](#development-environment)
-    - [Dotfile management strategy](#dotfile-management-strategy)
-    <!--toc:end-->
+- [Setup](#setup)
+  - [Hardware](#hardware)
+  - [OS](#os)
+  - [Desktop environment](#desktop-environment)
+  - [Development environment](#development-environment)
+  - [Dotfile management strategy](#dotfile-management-strategy)
+  <!--toc:end-->
 
 Hello, my name is Raphaël. I am a French student in Reims, France, currently
 studying for a engineering degree in computer science, specialized in embedded system
