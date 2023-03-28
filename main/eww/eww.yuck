@@ -1,3 +1,5 @@
+(include "ewwhost.yuck")
+
 (defwidget bar []
   (centerbox :orientation "h"
     (workspaces)
@@ -63,14 +65,3 @@
 
 (defpoll time :interval "10s"
   "date '+%H:%M %b %d, %Y'")
-
-(defwindow bar
-  :monitor 0
-  :exclusive true
-  :windowtype "dock"
-  :geometry (geometry :x "0%"
-                      :y "10px"
-                      :width "3420px"
-                      :height "30px"
-                      :anchor "top center")
-  (bar))
