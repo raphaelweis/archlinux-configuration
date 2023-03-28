@@ -88,6 +88,7 @@ local plugins = {
 	{ "ahmedkhalf/project.nvim" }, -- project management plugin
 	{ "akinsho/bufferline.nvim" }, -- bufferline with tabs
 	{ "lukas-reineke/indent-blankline.nvim" }, -- indent guides (like in vs code)
+	{ "eraserhd/parinfer-rust", build = "cargo build --release" },
 
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" },
