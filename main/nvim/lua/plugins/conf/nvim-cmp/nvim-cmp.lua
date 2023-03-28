@@ -66,3 +66,7 @@ require("lspconfig")["tsserver"].setup({ -- Javascript language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+require("lspconfig")["intelephense"].setup({ -- PHP language server
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
