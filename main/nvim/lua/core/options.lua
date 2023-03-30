@@ -16,3 +16,11 @@ vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from au
 
 -- else
 vim.opt.mousemoveevent = true -- for bufferline - might cause problems
+
+-- change indentation size to 4 only on php files
+vim.cmd([[ 
+augroup PHPSettings
+  autocmd!
+  autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
+augroup END
+]])
