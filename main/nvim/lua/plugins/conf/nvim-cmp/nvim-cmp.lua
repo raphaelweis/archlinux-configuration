@@ -70,3 +70,7 @@ require("lspconfig")["intelephense"].setup({ -- PHP language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+require("lspconfig")["phpactor"].setup({ -- PHP language server2
+	capabilities = capabilities,
+	on_attach = on_attach,
+})

@@ -24,3 +24,9 @@ augroup PHPSettings
   autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
 augroup END
 ]])
+
+-- enable automatic line wrapping for markdown buffers
+vim.cmd("autocmd FileType markdown setlocal wrap")
+vim.cmd("autocmd FileType markdown setlocal linebreak")
+vim.cmd("autocmd FileType markdown setlocal nolist")
+vim.cmd("autocmd FileType markdown setlocal textwidth=80")

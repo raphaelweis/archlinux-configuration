@@ -2,7 +2,8 @@
     "diagnostics.globals": [
         "vim",
         "colorschemeConfig",
-        "cmpKeymaps"
+        "cmpKeymaps",
+        "isMarkdown"
     ],
     "workspace.checkThirdParty": false
 }
