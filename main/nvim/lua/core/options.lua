@@ -15,9 +15,13 @@ vim.opt.wrap = false -- lines that are too long will not get cut to show on the 
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from automatically commenting new lines
 
 -- spell checking
-vim.opt.spelllang = { "en_us", "fr" }
+vim.opt.spelllang = { "en", "fr" }
 
+-----------------------------
 -- else
+-----------------------------
+
+-- enable mouse movement
 vim.opt.mousemoveevent = true -- for bufferline - might cause problems
 
 -- change indentation size to 4 only on php files
@@ -28,7 +32,7 @@ augroup PHPSettings
 augroup END
 ]])
 
--- enable automatic line wrapping for markdown buffers
+-- enable automatic line wrapping for markdown buffers - 80 characters max
 vim.cmd("autocmd FileType markdown,tex setlocal wrap")
 vim.cmd("autocmd FileType markdown,tex setlocal linebreak")
 vim.cmd("autocmd FileType markdown,tex setlocal nolist")
