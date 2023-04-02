@@ -90,11 +90,12 @@ local plugins = {
 	{ "lukas-reineke/indent-blankline.nvim" }, -- indent guides (like in vs code)
 	{ "eraserhd/parinfer-rust", build = "cargo build --release" }, -- to work with lisp expressions
 	{ "iamcco/markdown-preview.nvim", build = "cd app && npm install" }, -- to preview markdown documents
-	{ "preservim/vim-markdown", branch = "master", dependencies = "godlygeek/tabular" }, -- to work with markdown documents
-	{ "lervag/vimtex" }, -- for LaTeX documents
+	{ "andrewferrier/wrapping.nvim" }, -- for better wrapping in natural text documents
 
 	-- vimscript plugins
-	{ "elkowar/yuck.vim" },
+	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
+	{ "lervag/vimtex" }, -- for LaTeX documents
+	{ "preservim/vim-markdown", branch = "master", dependencies = "godlygeek/tabular" }, -- to work with markdown documents
 }
 
 -- options table

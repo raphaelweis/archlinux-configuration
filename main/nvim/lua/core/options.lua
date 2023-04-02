@@ -26,7 +26,7 @@ augroup END
 ]])
 
 -- enable automatic line wrapping for markdown buffers
-vim.cmd("autocmd FileType markdown setlocal wrap")
-vim.cmd("autocmd FileType markdown setlocal linebreak")
-vim.cmd("autocmd FileType markdown setlocal nolist")
-vim.cmd("autocmd FileType markdown setlocal textwidth=80")
+vim.cmd("autocmd FileType markdown,tex setlocal wrap")
+vim.cmd("autocmd FileType markdown,tex setlocal linebreak")
+vim.cmd("autocmd FileType markdown,tex setlocal nolist")
+vim.cmd("autocmd FileType markdown,tex setlocal textwidth=80")
