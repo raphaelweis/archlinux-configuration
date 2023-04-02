@@ -56,3 +56,5 @@ alias bonjour='cowsay bonjour' # absolutely capital
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local"
 export XDG_CACHE_HOME="$HOME/.cache"
+export BROWSER="/usr/bin/firefox"
+export PDFVIEWER="/usr/bin/firefox"
