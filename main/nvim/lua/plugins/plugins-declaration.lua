@@ -91,6 +91,7 @@ local plugins = {
 	{ "eraserhd/parinfer-rust", build = "cargo build --release" }, -- to work with lisp expressions
 	{ "iamcco/markdown-preview.nvim", build = "cd app && npm install" }, -- to preview markdown documents
 	{ "andrewferrier/wrapping.nvim" }, -- for better wrapping in natural text documents
+	{ "Pocco81/true-zen.nvim" }, -- toggle between modes for zen coding
 
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
