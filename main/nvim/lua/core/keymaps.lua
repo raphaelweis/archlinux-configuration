@@ -22,9 +22,9 @@ vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>") --  go to previous tab
 vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") -- close current tab
 
 -- spell checking
-vim.keymap.set("n", "<leader>wfr", "<cmd>set spell spelllang=fr") -- change spell checking language to french
-vim.keymap.set("n", "<leader>wen", "<cmd>set spell spelllang=en") -- change spell checking language to english
-vim.keymap.set("n", "<leader>ww", "<cmd>set spell!") -- toggle spell checking
+vim.keymap.set("n", "<leader>wfr", "<cmd>set spell spelllang=fr<CR>") -- change spell checking language to french
+vim.keymap.set("n", "<leader>wen", "<cmd>set spell spelllang=en<CR>") -- change spell checking language to english
+vim.keymap.set("n", "<leader>ww", "<cmd>set spell!<CR>") -- toggle spell checking
 
 -- plugin specific keymaps
 vim.keymap.set("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>") -- toggle + focus file tree

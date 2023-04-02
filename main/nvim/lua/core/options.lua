@@ -14,6 +14,8 @@ vim.opt.autoindent = true -- copy indent from current line when going to a new l
 vim.opt.wrap = false -- lines that are too long will not get cut to show on the line under them
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from automatically commenting new lines
 
+-- spell checking
+
 -- else
 vim.opt.mousemoveevent = true -- for bufferline - might cause problems
 
