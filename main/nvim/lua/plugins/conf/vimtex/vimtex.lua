@@ -12,11 +12,6 @@ vim.g.vimtex_compiler_latexmk = {
 	},
 }
 
--- Configure keybindings
-vim.api.nvim_set_keymap("n", "<leader>ll", ":VimtexCompile<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>lv", ":VimtexView<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>lt", ":VimtexToggle<CR>", { noremap = true })
-
 -- Set options
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "vimtex#fold#expr()"
