@@ -16,10 +16,15 @@ vim.keymap.set("n", "<leader>j", "<cmd>wincmd j<CR>") -- move the cursor to the 
 vim.keymap.set("n", "<leader>h", "<cmd>wincmd h<CR>") -- move the cursor to the adjacent left window
 vim.keymap.set("n", "<leader>l", "<cmd>wincmd l<CR>") -- move the cursor to the adjacent right window
 
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>") -- open new tab
+vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>") --  go to next tab
+vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>") --  go to previous tab
+vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") -- close current tab
+
+-- spell checking
+vim.keymap.set("n", "<leader>wfr", "<cmd>set spell spelllang=fr") -- change spell checking language to french
+vim.keymap.set("n", "<leader>wen", "<cmd>set spell spelllang=en") -- change spell checking language to english
+vim.keymap.set("n", "<leader>ww", "<cmd>set spell!") -- toggle spell checking
 
 -- plugin specific keymaps
 vim.keymap.set("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>") -- toggle + focus file tree
