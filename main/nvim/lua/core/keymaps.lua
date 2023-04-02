@@ -29,6 +29,8 @@ vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<CR>") -- toggle terminal 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy finder
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<CR>") -- fuzzy finder with hidden files
 
+vim.keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>") -- toggle ataraxis zen mode
+
 cmpKeymaps = function(cmp) -- keymaps for viewing and accepting autocompletion propositions
 	return cmp.mapping.preset.insert({
 		["<TAB>"] = cmp.mapping.select_next_item(), -- next suggestion
