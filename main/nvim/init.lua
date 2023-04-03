@@ -1,7 +1,9 @@
 -- core functionality
-require("core.colorscheme")
 require("core.keymaps")
 require("core.options")
+
+-- colorscheme
+require("colorscheme.colorscheme")
 
 -- miscellaneous
 require("misc.misc")

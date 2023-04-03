@@ -31,6 +31,7 @@ vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<CR>") -- toggle terminal 
 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy finder
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<CR>") -- fuzzy finder with hidden files
+vim.keymap.set("n", "<leader>fp", "<cmd>Telescope projects<CR>") -- open projects
 
 vim.keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>") -- toggle ataraxis zen mode
 
