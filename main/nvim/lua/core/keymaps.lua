@@ -4,6 +4,7 @@ vim.g.mapleader = " " -- define space as leader key
 -- general keymaps
 vim.keymap.set("i", "jk", "<ESC>") -- use jk to exit insert mode
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>") -- remove highlighting after search
+vim.keymap.set("n", "<leader>quit", "<cmd>w<bar>xa<CR>") -- quit neovim
 
 -- window and tab management
 vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -32,6 +33,7 @@ vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<CR>") -- toggle terminal 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy finder
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<CR>") -- fuzzy finder with hidden files
 vim.keymap.set("n", "<leader>fp", "<cmd>Telescope projects<CR>") -- open projects
+vim.keymap.set("n", "<leader>fs", "<cmd>SessionManager load_session<CR>") -- open session
 
 vim.keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>") -- toggle ataraxis zen mode
 

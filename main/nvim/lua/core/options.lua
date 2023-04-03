@@ -21,6 +21,9 @@ vim.opt.spelllang = { "en", "fr" }
 -- else
 -----------------------------
 
+-- save all if SIGHUP signal gets sent
+vim.opt.autowriteall = true
+
 -- enable mouse movement
 vim.opt.mousemoveevent = true -- for bufferline - might cause problems
 

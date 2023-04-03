@@ -55,7 +55,12 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim", -- fuzzy finder for neovim
 		tag = "0.1.1",
-		dependencies = { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep", "nvim-telescope/telescope-fzf-native.nvim" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"BurntSushi/ripgrep",
+			"nvim-telescope/telescope-fzf-native.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
+		},
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim", -- fzf algorithm to make telescope fuzzy finder faster
@@ -98,6 +103,7 @@ local plugins = {
 	{ "iamcco/markdown-preview.nvim", build = "cd app && npm install" }, -- to preview markdown documents
 	{ "andrewferrier/wrapping.nvim" }, -- for better wrapping in natural text documents
 	{ "Pocco81/true-zen.nvim" }, -- toggle between modes for zen coding
+	{ "Shatur/neovim-session-manager" }, -- manage sessions in vscode fashion
 
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
