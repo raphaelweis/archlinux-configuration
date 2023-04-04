@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>quit", "<cmd>w<bar>x!a<CR>") -- quit neovim
 -- buffer, window and tab management
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>") -- go to next buffer
 vim.keymap.set("n", "<leader>bp", "<cmd>bprev<CR>") -- go to previous buffer
+vim.keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>") -- delete current buffer
 
 vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 vim.keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
