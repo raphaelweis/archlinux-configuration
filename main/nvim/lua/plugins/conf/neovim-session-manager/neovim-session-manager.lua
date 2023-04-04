@@ -4,7 +4,7 @@ require("session_manager").setup({
 
 local config_group = vim.api.nvim_create_augroup("MyConfigGroup", {}) -- A global group for all your config autocommands
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, { -- save session everytime a buffer is written to
+vim.api.nvim_create_autocmd({ "VimLeavePre" }, { -- save session everytime a buffer is written to
 	group = config_group,
 	callback = function()
 		if vim.bo.filetype ~= "git" and not vim.bo.filetype ~= "gitcommit" then
