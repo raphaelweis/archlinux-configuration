@@ -7,7 +7,6 @@ require("mason-lspconfig").setup({ -- brigde for lsp
 		"jdtls",
 		"intelephense",
 		"phpactor",
-		"psalm",
 		"tsserver",
 		"vimls",
 		"html",
@@ -16,13 +15,12 @@ require("mason-lspconfig").setup({ -- brigde for lsp
 	}, -- automatic installation of language servers
 })
 require("mason-null-ls").setup({ -- bridge for formatters and linters
-	ensure_installed = { "prettier", "stylua", "clang-format", "pint", "phpstan" }, -- automatic installation of formatters and linters
-	automatic_installation = true,
+	ensure_installed = { "prettier", "stylua", "clang-format", "pint" }, -- automatic installation of formatters and linters
+	automatic_installation = false,
 	automatic_setup = true,
 })
 
 local null_ls = require("null-ls")
-
 require("mason-null-ls").setup_handlers({
 	function(source_name, methods)
 		-- all sources with no handler get passed here
