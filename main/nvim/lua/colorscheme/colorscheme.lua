@@ -19,3 +19,15 @@ TundraConfig = function()
 	})
 	-- vim.cmd([[colorscheme tundra]])
 end
+
+CatppuccinConfig = function()
+	require("catppuccin").setup({
+		highlight_overrides = {
+			latte = telescopeBorderless("latte"),
+			frappe = telescopeBorderless("frappe"),
+			macchiato = telescopeBorderless("macchiato"),
+			mocha = telescopeBorderless("mocha"),
+		},
+	})
+	-- vim.cmd([[colorscheme catppuccin]])
+end

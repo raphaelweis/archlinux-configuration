@@ -32,6 +32,12 @@ local plugins = {
 		priority = 1000,
 		config = TundraConfig,
 	},
+	{
+		"catppuccin/nvim", -- colorscheme plugin 4
+		lazy = false,
+		priority = 1000,
+		config = CatppuccinConfig,
+	},
 	{ "folke/which-key.nvim" }, -- pop-up menu that shows possible keybinds after pressing a key
 	{ "windwp/nvim-autopairs" }, -- automatically insert closing brackets, parenthesis, quotes, etc
 	{ "numToStr/Comment.nvim" }, -- automatically comment lines or blocks of code
