@@ -16,6 +16,7 @@ vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from au
 
 -- spell checking
 vim.opt.spelllang = { "en", "fr" }
+vim.opt.spellfile = os.getenv("VIMCONFDIR") .. "/spell/dictionary.add" -- custom dictionary
 
 -----------------------------
 -- else
