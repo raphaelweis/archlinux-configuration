@@ -4,8 +4,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({ -- formatters and linters
 	sources = {
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.diagnostics.eslint,
-		null_ls.builtins.completion.spell,
 	},
 	on_attach = function(current_client, bufnr) -- enable auto-formatting of the document when saving (from documentation)
 		if current_client.supports_method("textDocument/formatting") then
