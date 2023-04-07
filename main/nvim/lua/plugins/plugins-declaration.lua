@@ -114,7 +114,6 @@ local plugins = {
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
 	{ "lervag/vimtex" }, -- for LaTeX documents
-	{ "preservim/vim-markdown", branch = "master", dependencies = "godlygeek/tabular" }, -- to work with markdown documents
 }
 
 -- options table
