@@ -4,7 +4,7 @@ vim.g.mapleader = " " -- define space as leader key
 -- general keymaps
 vim.keymap.set("i", "jk", "<ESC>") -- use jk to exit insert mode
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>") -- remove highlighting after search
-vim.keymap.set("n", "<leader>quit", "<cmd>w<bar>x!a<CR>") -- quit neovim
+vim.keymap.set("n", "<leader>quit", "<cmd>wqa!<CR>") -- quit neovim
 
 -- buffer, window and tab management
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>") -- go to next buffer
@@ -39,6 +39,8 @@ vim.keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<CR>") -
 vim.keymap.set("n", "<leader>fp", "<cmd>Telescope projects<CR>") -- open projects
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>") -- view open buffers
 vim.keymap.set("n", "<leader>fs", "<cmd>SessionManager load_session<CR>") -- open session
+
+vim.keymap.set("n", "<C-S>", "<cmd>SessionManager save_current_session<CR>") -- save current session
 
 vim.keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>") -- toggle ataraxis zen mode
 
