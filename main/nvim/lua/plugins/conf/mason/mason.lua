@@ -5,7 +5,6 @@ require("mason-lspconfig").setup({ -- brigde for lsp
 		"lua_ls",
 		"clangd",
 		"jdtls",
-		"intelephense",
 		"phpactor",
 		"tsserver",
 		"vimls",

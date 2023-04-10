@@ -66,15 +66,11 @@ require("lspconfig")["tsserver"].setup({ -- Javascript language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["intelephense"].setup({ -- PHP language server
+require("lspconfig")["phpactor"].setup({ -- PHP language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["phpactor"].setup({ -- PHP language server 2
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-require("lspconfig")["texlab"].setup({ -- PHP language server 2
+require("lspconfig")["texlab"].setup({ -- LaTeX language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
