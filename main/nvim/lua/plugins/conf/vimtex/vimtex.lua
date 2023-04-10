@@ -11,6 +11,7 @@ vim.g.vimtex_compiler_latexmk = {
 		"-shell-escape",
 	},
 }
+vim.g.vimtex_syntax_conceal_disable = 1
 
 -- Set options
 vim.opt.foldmethod = "expr"
