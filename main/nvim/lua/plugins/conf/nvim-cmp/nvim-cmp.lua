@@ -74,3 +74,7 @@ require("lspconfig")["phpactor"].setup({ -- PHP language server 2
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+require("lspconfig")["texlab"].setup({ -- PHP language server 2
+	capabilities = capabilities,
+	on_attach = on_attach,
+})

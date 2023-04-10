@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({ -- brigde for lsp
 		"html",
 		"cssls",
 		"marksman",
+		"texlab",
 	}, -- automatic installation of language servers
 })
 require("mason-null-ls").setup({ -- bridge for formatters and linters
