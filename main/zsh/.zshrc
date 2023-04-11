@@ -48,6 +48,11 @@ alias la='ls -la'
 alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
+alias ..="cd .."
+alias .2="../.."
+alias .3="../../.."
+alias .4="../../../.."
+alias .5="../../../../.."
 
 #######################################
 # Environment variables
