@@ -74,3 +74,7 @@ require("lspconfig")["texlab"].setup({ -- LaTeX language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+require("lspconfig")["bashls"].setup({ -- Bash language server
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
