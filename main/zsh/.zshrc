@@ -60,5 +60,3 @@ export BROWSER="/usr/bin/firefox"
 export PDFVIEWER="/usr/bin/firefox"
 export VIMRC="$XDG_CONFIG_HOME/nvim/init.lua"
 export VIMCONFDIR="$XDG_CONFIG_HOME/nvim"
-
-echo "success: sourced .zshrc"
