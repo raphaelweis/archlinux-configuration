@@ -22,6 +22,9 @@ antidote load
 # source zsh theme (powerlevel10k)
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
+# source zsh history substring search
+source $ZDOTDIR/zsh-history-substring-search.zsh
+
 #######################################
 # General Configuration
 #######################################
@@ -37,8 +40,12 @@ setopt autocd extendedglob # typing a path to a directory will auto cd into it
 #
 unsetopt beep # disable beep when errors occur
 
-# Keybinds : vi
+# Keybinds: vi
 bindkey -v
+
+# Keybinds: zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 #######################################
 # Aliases 
