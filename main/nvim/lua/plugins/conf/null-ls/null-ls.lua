@@ -5,10 +5,11 @@ local formatting = null_ls.builtins.formatting
 
 null_ls.setup({ -- formatters and linters
 	sources = {
-    formatting.prettier,
-    formatting.stylua,
-    formatting.clang_format,
-  },
+		formatting.prettier,
+		formatting.stylua,
+		formatting.clang_format,
+		formatting.phpcsfixer,
+	},
 	on_attach = function(current_client, bufnr) -- enable auto-formatting of the document when saving (from documentation)
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
