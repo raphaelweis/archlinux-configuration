@@ -13,3 +13,6 @@ fi
 
 # stow main second
 stow main -t ~/.config
+
+# stow special packages
+stow -d special wrappedhl -t ~/.local/bin
