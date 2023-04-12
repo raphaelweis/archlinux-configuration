@@ -14,6 +14,9 @@ fi
 # stow main second
 stow main -t ~/.config
 
+# stow scripts third
+stow scripts -t ~/.local/bin
+
 # stow special packages
 stow -d ./special wrappedhl -t ~/.local/bin/
 stow -d ./special zshenv -t ~/
