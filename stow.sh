@@ -16,3 +16,4 @@ stow main -t ~/.config
 
 # stow special packages
 stow -d ./special wrappedhl -t ~/.local/bin/
+stow -d ./special zshenv -t ~/
