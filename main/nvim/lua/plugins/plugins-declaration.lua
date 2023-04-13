@@ -38,6 +38,12 @@ local plugins = {
 		priority = 1000,
 		config = CatppuccinConfig,
 	},
+  {
+    "lunarvim/Onedarker.nvim", -- colorscheme plugin 5
+    lazy = false,
+    priority = 1000,
+    config = OneDarkerConfig,
+  },
 	{ "folke/which-key.nvim" }, -- pop-up menu that shows possible keybinds after pressing a key
 	{ "windwp/nvim-autopairs" }, -- automatically insert closing brackets, parenthesis, quotes, etc
 	{ "numToStr/Comment.nvim" }, -- automatically comment lines or blocks of code

@@ -1,4 +1,3 @@
--- configuration function for the gruvbox plugin
 GruvboxConfig = function() -- configuration for gruvbox.nvim plugin
 	require("gruvbox").setup({
 		transparent_mode = true, -- enable or disable colored background that is specific to neovim (also affects things like terminal mode)
@@ -14,7 +13,7 @@ end
 TundraConfig = function()
 	require("nvim-tundra").setup({
 		plugins = {
-			telescope = true,
+			telescope = true, -- enable telescope custom style
 		},
 	})
 	-- vim.cmd([[colorscheme tundra]])
@@ -23,4 +22,8 @@ end
 CatppuccinConfig = function()
 	require("catppuccin").setup({})
 	-- vim.cmd([[colorscheme catppuccin]])
+end
+
+OneDarkerConfig = function()
+	-- vim.cmd([[colorscheme onedarker]])
 end
