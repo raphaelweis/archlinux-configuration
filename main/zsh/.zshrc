@@ -51,17 +51,22 @@ bindkey '^[[B' history-substring-search-down
 # Aliases 
 #######################################
 
-alias la='ls -la'
+#use lsd as a replacement for la
+alias ls='lsd'
+alias la='lsd -la'
+
 alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
 alias bt='bluetuith' # bluetooth tui
 
-alias ..="cd .."
-alias .2="../.."
-alias .3="../../.."
-alias .4="../../../.."
-alias .5="../../../../.."
+# use zoxide as a replacement for cd.
+alias cd='z'
+
+alias .2='../..'
+alias .3='../../..'
+alias .4='../../../..'
+alias .5='../../../../..'
 
 #######################################
 # Environment variables
@@ -110,5 +115,10 @@ ex ()
 # Else
 #######################################
 
+#nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # To work with nvm, see documentation at https://github.com/nvm-sh/nvm
+
+#zoxide
+eval "$(zoxide init zsh)"
+
