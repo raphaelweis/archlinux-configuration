@@ -38,12 +38,12 @@ local plugins = {
 		priority = 1000,
 		config = CatppuccinConfig,
 	},
-  {
-    "lunarvim/Onedarker.nvim", -- colorscheme plugin 5
-    lazy = false,
-    priority = 1000,
-    config = OneDarkerConfig,
-  },
+	{
+		"lunarvim/Onedarker.nvim", -- colorscheme plugin 5
+		lazy = false,
+		priority = 1000,
+		config = OneDarkerConfig,
+	},
 	{ "folke/which-key.nvim" }, -- pop-up menu that shows possible keybinds after pressing a key
 	{ "windwp/nvim-autopairs" }, -- automatically insert closing brackets, parenthesis, quotes, etc
 	{ "numToStr/Comment.nvim" }, -- automatically comment lines or blocks of code
@@ -119,6 +119,7 @@ local plugins = {
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
 	{ "lervag/vimtex" }, -- for LaTeX documents
+	{ "tpope/vim-fugitive" }, -- the Lebron James equivalent of vim plugins
 
 	-- deprecated plugins (the configuration for those still exists, but they are not in use)
 	-- { "ahmedkhalf/project.nvim" }, -- project management plugin
