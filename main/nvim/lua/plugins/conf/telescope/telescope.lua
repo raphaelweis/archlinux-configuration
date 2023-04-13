@@ -1,5 +1,10 @@
 -- telescope
-require("telescope").setup({
+local telescope_setup, telescope = pcall(require, "telescope")
+if not telescope_setup then
+	return
+end
+
+telescope.setup({
 	defaults = {
 		prompt_prefix = "   ",
 		selection_caret = " ",
@@ -13,6 +18,5 @@ require("telescope").setup({
 	},
 })
 
-require("telescope").load_extension("fzf") -- load fzf extension
-require("telescope").load_extension("projects") -- load projects extension
-require("telescope").load_extension("ui-select") -- load ui-select extension
+telescope.load_extension("fzf") -- load fzf extension
+telescope.load_extension("ui-select") -- load ui-select extension

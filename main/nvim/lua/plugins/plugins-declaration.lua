@@ -102,7 +102,6 @@ local plugins = {
 	{ "rcarriga/nvim-notify" }, -- notifications
 	{ "folke/neodev.nvim" }, -- completion and documentation for lua neovim config and API's
 	{ "lewis6991/gitsigns.nvim" }, -- git decoration on sidebar
-	{ "ahmedkhalf/project.nvim" }, -- project management plugin
 	{ "akinsho/bufferline.nvim" }, -- bufferline with tabs
 	{ "lukas-reineke/indent-blankline.nvim" }, -- indent guides (like in vs code)
 	{ "eraserhd/parinfer-rust", build = "cargo build --release" }, -- to work with lisp expressions
@@ -114,6 +113,9 @@ local plugins = {
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
 	{ "lervag/vimtex" }, -- for LaTeX documents
+
+	-- deprecated plugins (the configuration for those still exists, but they are not in use)
+	-- { "ahmedkhalf/project.nvim" }, -- project management plugin
 }
 
 -- options table

@@ -12,7 +12,12 @@ vim.opt.shiftwidth = 2 -- indentation = 2 spaces
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.autoindent = true -- copy indent from current line when going to a new line
 vim.opt.wrap = false -- lines that are too long will not get cut to show on the line under them
+vim.opt.iskeyword:append("-") -- include "-" as a word character, meaning string-string is a whole word.
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]]) -- prevent neovim from automatically commenting new lines
+
+-- windows and buffers
+vim.opt.splitright = true -- split vertical windows to the right
+vim.opt.splitbelow = true -- split horizontal windows to the bottom
 
 -- spell checking
 vim.opt.spelllang = { "en", "fr" }

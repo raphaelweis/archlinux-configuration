@@ -1,5 +1,27 @@
 -- nvim-cmp
-local cmp = require("cmp")
+local cmp_setup, cmp = pcall(require, "cmp")
+if not cmp_setup then
+	return
+end
+
+local luasnip_loaders_setup, luasnip_loaders = pcall(require, "luasnip/loaders/from_vscode")
+if not luasnip_loaders_setup then
+	print("Warning: could not load luasnip_loader. see nvim-cmp.lua")
+	return
+end
+
+local cmp_nvim_slp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_slp_setup then
+	print("Warning: could not load cmp_nvim_lsp. see nvim-cmp.lua")
+	return
+end
+
+local lspconfig_setup, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_setup then
+	print("Warning: could not load cmp_nvim_lsp. see nvim-cmp.lua")
+	return
+end
+
 cmp.setup({ -- load cmp completion
 	snippet = { -- choose snippet engine
 		expand = function(args)
@@ -15,15 +37,15 @@ cmp.setup({ -- load cmp completion
 })
 
 -- load vs-code snippets from plugins (example : from friendly-snippets)
-require("luasnip/loaders/from_vscode").lazy_load()
+luasnip_loaders.lazy_load()
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities() -- from documentation
+local capabilities = cmp_nvim_lsp.default_capabilities() -- from documentation
 local on_attach = function(client, bufnr) -- to make sure that the following keybinds are not active when the language server is not installed
 	LSPKeymaps({ noremap = true, silent = true, buffer = bufnr }) -- passing of the options table as an argument
 end
 cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done()) -- to make autopairs.nvim insert () after accepting a proposition
 
-require("lspconfig")["lua_ls"].setup({ -- Lua language server config
+lspconfig["lua_ls"].setup({ -- Lua language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
@@ -34,47 +56,47 @@ require("lspconfig")["lua_ls"].setup({ -- Lua language server config
 		},
 	},
 })
-require("lspconfig")["clangd"].setup({ -- C language server config
+lspconfig["clangd"].setup({ -- C language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["jdtls"].setup({ -- Java language server config
+lspconfig["jdtls"].setup({ -- Java language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["vimls"].setup({ -- Vim language server config
+lspconfig["vimls"].setup({ -- Vim language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["nil_ls"].setup({ -- Nix language server config
+lspconfig["nil_ls"].setup({ -- Nix language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["marksman"].setup({ -- Markdown language server config
+lspconfig["marksman"].setup({ -- Markdown language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["html"].setup({ -- HTML language server config
+lspconfig["html"].setup({ -- HTML language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["cssls"].setup({ -- CSS language server config
+lspconfig["cssls"].setup({ -- CSS language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["tsserver"].setup({ -- Javascript language server config
+lspconfig["tsserver"].setup({ -- Javascript language server config
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["phpactor"].setup({ -- PHP language server
+lspconfig["phpactor"].setup({ -- PHP language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["texlab"].setup({ -- LaTeX language server
+lspconfig["texlab"].setup({ -- LaTeX language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
-require("lspconfig")["bashls"].setup({ -- Bash language server
+lspconfig["bashls"].setup({ -- Bash language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

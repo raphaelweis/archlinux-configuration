@@ -1,42 +1,45 @@
-local log = require("structlog")
+local structlog_setup, structlog = pcall(require, "structlog")
+if not structlog_setup then
+	return
+end
 
-log.configure({
+structlog.configure({
 	my_logger = {
 		pipelines = {
 			{
-				level = log.level.INFO,
+				level = structlog.level.INFO,
 				processors = {
-					log.processors.StackWriter({ "line", "file" }, { max_parents = 0, stack_level = 0 }),
-					log.processors.Timestamper("%H:%M:%S"),
+					structlog.processors.StackWriter({ "line", "file" }, { max_parents = 0, stack_level = 0 }),
+					structlog.processors.Timestamper("%H:%M:%S"),
 				},
-				formatter = log.formatters.FormatColorizer( --
+				formatter = structlog.formatters.FormatColorizer( --
 					"%s [%s] %s: %-30s",
 					{ "timestamp", "level", "logger_name", "msg" },
-					{ level = log.formatters.FormatColorizer.color_level() }
+					{ level = structlog.formatters.FormatColorizer.color_level() }
 				),
-				sink = log.sinks.Console(),
+				sink = structlog.sinks.Console(),
 			},
 			{
-				level = log.level.WARN,
+				level = structlog.level.WARN,
 				processors = {},
-				formatter = log.formatters.Format( --
+				formatter = structlog.formatters.Format( --
 					"%s",
 					{ "msg" },
 					{ blacklist = { "level", "logger_name" } }
 				),
-				sink = log.sinks.NvimNotify(),
+				sink = structlog.sinks.NvimNotify(),
 			},
 			{
-				level = log.level.TRACE,
+				level = structlog.level.TRACE,
 				processors = {
-					log.processors.StackWriter({ "line", "file" }, { max_parents = 3 }),
-					log.processors.Timestamper("%H:%M:%S"),
+					structlog.processors.StackWriter({ "line", "file" }, { max_parents = 3 }),
+					structlog.processors.Timestamper("%H:%M:%S"),
 				},
-				formatter = log.formatters.Format( --
+				formatter = structlog.formatters.Format( --
 					"%s [%s] %s: %-30s",
 					{ "timestamp", "level", "logger_name", "msg" }
 				),
-				sink = log.sinks.File("./test.log"),
+				sink = structlog.sinks.File("./test.log"),
 			},
 		},
 	},
