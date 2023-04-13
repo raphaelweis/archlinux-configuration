@@ -55,6 +55,8 @@ alias la='ls -la'
 alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
+alias bt='bluetuith' # bluetooth tui
+
 alias ..="cd .."
 alias .2="../.."
 alias .3="../../.."
