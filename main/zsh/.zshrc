@@ -88,8 +88,7 @@ export VIMCONFDIR="$XDG_CONFIG_HOME/nvim"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
-ex ()
-{
+ex () {
   if [ -f "$1" ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
@@ -124,3 +123,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 #zoxide
 eval "$(zoxide init zsh)"
 
+#fzf
+source "$ZDOTDIR/fzf/key-bindings.zsh"
+source "$ZDOTDIR/fzf/completion.zsh"
