@@ -59,6 +59,7 @@ alias vim='nvim'
 alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
 alias bt='bluetuith' # bluetooth tui
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash && zsh'
 
 # use zoxide as a replacement for cd.
 alias cd='z'
