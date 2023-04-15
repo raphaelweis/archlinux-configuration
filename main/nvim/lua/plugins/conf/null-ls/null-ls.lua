@@ -13,6 +13,7 @@ null_ls.setup({ -- formatters and linters
 		formatting.stylua,
 		formatting.clang_format,
 		formatting.phpcsfixer,
+		formatting.sql_formatter,
 	},
 	on_attach = function(current_client, bufnr) -- enable auto-formatting of the document when saving (from documentation)
 		if current_client.supports_method("textDocument/formatting") then
