@@ -1,22 +1,61 @@
 * {
-  font-size: 15;
+  font-family: "MesloLGS Nerd Font", monospace;
+  font-size: 14px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 window#waybar {
-  border-radius: 5px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
   border: 2px solid #000000;
 }
 
+#mpris {
+  margin: 0px 10px 0px 10px;
+}
+
+#workspaces {
+  margin: 2px 5px 2px 5px;
+}
 #workspaces button {
   min-height: 0px;
   min-width: 0px;
-  margin: 5px 0px 5px 0px;
+  padding: 0px 10px 0px 10px;
 }
-
 #workspaces button.active {
   color: red;
 }
 
+#pulseaudio {
+  margin: 2px 5px 2px 5px;
+}
+
+#network {
+  margin: 2px 5px 2px 5px;
+}
+
+#cpu {
+  margin: 2px 5px 2px 5px;
+}
+
+#memory {
+  margin: 2px 5px 2px 5px;
+}
+
+#temperature {
+  margin: 2px 5px 2px 5px;
+}
+
+#keyboard-state label {
+  margin: 2px 5px 2px 5px;
+  padding: 0px 10px 0px 10px;
+}
+#keyboard-state label.locked {
+  background-color: red;
+}
+
 #clock {
-  margin: 0px 10px 0px 10px;
+  font-weight: bold;
+  margin: 0px 10px 0px 0px;
 }
