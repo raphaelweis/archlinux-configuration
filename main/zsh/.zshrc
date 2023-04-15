@@ -73,11 +73,13 @@ alias .5='../../../../..'
 # Environment variables
 #######################################
 
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local"
 export XDG_CACHE_HOME="$HOME/.cache"
-export BROWSER="/usr/bin/firefox"
-export TERMINAL="alacritty"
 export PDFVIEWER="/usr/bin/firefox"
 export VIMRC="$XDG_CONFIG_HOME/nvim/init.lua"
 export VIMCONFDIR="$XDG_CONFIG_HOME/nvim"
