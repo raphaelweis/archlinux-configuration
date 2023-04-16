@@ -6,4 +6,6 @@ if [ ! -d "$DIR" ]; then
     mkdir -p "$DIR"
 fi
 
-grim -g "$(slurp)" "$DIR/$(date +%Y-%m-%d-%H-%M-%S).png"
+screenshot=$DIR/$(date +%Y-%m-%d-%H-%M-%S).png
+grim -g "$(slurp)" "$screenshot"
+wl-copy < "$screenshot"
