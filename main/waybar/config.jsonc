@@ -1,4 +1,5 @@
 {
+  "include": "~/.config/waybar/confighost.jsonc",
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 30, // Waybar height (to be removed for auto height)
@@ -11,7 +12,7 @@
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
-    "network",
+    "backlight",
     "cpu",
     "memory",
     "temperature",
@@ -36,31 +37,20 @@
     }
   },
   "mpris": {
-    "format": "{player_icon} {artist} - {title}",
-    "format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+    "format": "{status_icon} {artist} - {title} {player_icon}",
+    "format-paused": "{status_icon} {artist} - {title} {player_icon}",
     "player-icons": {
       "default": "🎵",
-      "mpv": "🎵"
+      "spotify": "",
+      "firefox": ""
     },
     "status-icons": {
-      "paused": "⏸"
+      "paused": "⏸",
+      "playing": "▶",
+      "stopped": ""
     }
-    // "ignored-players": ["firefox"]
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
-  "tray": {
-    // "icon-size": 21,
-    "spacing": 10
   },
   "clock": {
-    // "timezone": "America/New_York",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
   "cpu": {
