@@ -1,0 +1,18 @@
+{
+  "modules-left": ["mpris"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "temperature",
+    "keyboard-state",
+    "clock"
+  ],
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  }
+}

@@ -1,4 +1,8 @@
 # Global environment variables
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 export GOPATH=$HOME/.go
 export COMPOSER_HOME=$HOME/.composer
 export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.composer/vendor/bin

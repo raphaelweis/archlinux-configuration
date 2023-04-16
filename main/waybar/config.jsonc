@@ -1,5 +1,6 @@
 {
-  "include": "~/.config/waybar/confighost.jsonc",
+  "include": "$XDG_CONFIG_HOME/waybar/confighost.jsonc",
+
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 30, // Waybar height (to be removed for auto height)
@@ -8,17 +9,6 @@
   "margin-left": 10,
   "margin-right": 10,
   // Choose the order of the modules
-  "modules-left": ["mpris"],
-  "modules-center": ["wlr/workspaces"],
-  "modules-right": [
-    "pulseaudio",
-    "backlight",
-    "cpu",
-    "memory",
-    "temperature",
-    "keyboard-state",
-    "clock"
-  ],
   // Modules configuration
   "wlr/workspaces": {
     "format": "{icon}",
@@ -45,8 +35,8 @@
       "firefox": ""
     },
     "status-icons": {
-      "paused": "⏸",
-      "playing": "▶",
+      "paused": "",
+      "playing": "",
       "stopped": ""
     }
   },
@@ -61,68 +51,21 @@
     "interval": 1,
     "format": "{used:5}GiB "
   },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
-  },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
+    "format": "{icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-  "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon}/ {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format": "{volume}% {icon} | {format_source}",
+    // "format-bluetooth": "{volume}% {icon} | {format_source}",
+    // "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "婢 | {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "\uf025",
-      "hands-free": "\uf025",
-      "headset": "\uf025 ",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", "墳", ""]
     },
     "on-click": "pavucontrol"
-  },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {},
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   }
 }

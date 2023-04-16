@@ -1,11 +1,27 @@
 * {
+  all: unset;
   font-family: "MesloLGS Nerd Font", monospace;
   font-size: 14px;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
 
-window#waybar {
+/* window#waybar { */
+/*   background-color: #3a3a3a; */
+/*   border-radius: 10px; */
+/*   border: 2px solid #000000; */
+/* } */
+.modules-left {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+.modules-center {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+.modules-right {
   background-color: #3a3a3a;
   border-radius: 10px;
   border: 2px solid #000000;
@@ -44,6 +60,10 @@ window#waybar {
 }
 
 #temperature {
+  margin: 2px 5px 2px 5px;
+}
+
+#battery {
   margin: 2px 5px 2px 5px;
 }
 
