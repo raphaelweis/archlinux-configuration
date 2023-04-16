@@ -115,6 +115,8 @@ local plugins = {
 	{ "andrewferrier/wrapping.nvim" }, -- for better wrapping in natural text documents
 	{ "Pocco81/true-zen.nvim" }, -- toggle between modes for zen coding
 	{ "Shatur/neovim-session-manager" }, -- manage sessions in vscode fashion
+	{ "stevearc/dressing.nvim" }, -- UI beautyfier
+	{ "ziontee113/icon-picker.nvim" }, -- icon and special character picker
 
 	-- vimscript plugins
 	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
