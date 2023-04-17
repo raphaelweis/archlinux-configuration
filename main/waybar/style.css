@@ -44,38 +44,78 @@
 }
 
 #pulseaudio {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #backlight {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #cpu {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #memory {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #temperature {
-  margin: 2px 5px 2px 5px;
-}
-
-#battery {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #keyboard-state label {
-  margin: 2px 5px 2px 5px;
+  margin: 2px 2px 2px 2px;
   padding: 0px 10px 0px 10px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 #keyboard-state label.locked {
   background-color: red;
+  border: 1px solid #330506;
+}
+
+#battery {
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
 
 #clock {
   font-weight: bold;
-  margin: 0px 10px 0px 0px;
+  margin: 2px 2px 2px 2px;
+  padding: 0px 5px 0px 5px;
+  background-color: grey;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 }
