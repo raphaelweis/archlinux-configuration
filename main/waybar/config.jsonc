@@ -16,21 +16,31 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "active-only": false,
-    "sort-by-number": true
-  },
-  "keyboard-state": {
-    "capslock": true,
-    "format": "{icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
+    "sort-by-number": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
     }
   },
+
+  "custom/logo": {
+    "format": "",
+    "on-click": "rofi -show run"
+  },
+
   "mpris": {
     "format": "{status_icon} {artist} - {title} {player_icon}",
     "format-paused": "{status_icon} {artist} - {title} {player_icon}",
     "player-icons": {
-      "default": "🎵",
+      "default": "",
       "spotify": "",
       "firefox": ""
     },
@@ -38,6 +48,14 @@
       "paused": "",
       "playing": "",
       "stopped": ""
+    }
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
     }
   },
   "clock": {

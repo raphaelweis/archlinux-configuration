@@ -1,38 +1,53 @@
+/***************************/
+/* general properties */
+/***************************/
 * {
   all: unset;
-  font-family: "MesloLGS Nerd Font", monospace;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 14px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
 }
 
-/* window#waybar { */
-/*   background-color: #3a3a3a; */
-/*   border-radius: 10px; */
-/*   border: 2px solid #000000; */
-/* } */
-.modules-left {
-  background-color: #3a3a3a;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-.modules-center {
-  background-color: #3a3a3a;
-  border-radius: 10px;
-  border: 2px solid #000000;
-}
-.modules-right {
-  background-color: #3a3a3a;
+/***************************/
+/* left modules */
+/***************************/
+#custom-logo {
+  font-size: 20;
+  color: #24283b;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 12px 0px 5px;
+  background-color: #bb9af7;
   border-radius: 10px;
   border: 2px solid #000000;
 }
 
 #mpris {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 10px 0px 5px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
+#keyboard-state label {
+  margin: 0px 1px 0px 1px;
+  padding: 0px 15px 0px 10px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+#keyboard-state label.locked {
+  padding: 0px 14px 0px 11px;
+  background-color: red;
+}
+
+/***************************/
+/* center modules */
+/***************************/
 #workspaces {
-  margin: 2px 5px 2px 5px;
+  margin: 0px 1px 0px 1px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 #workspaces button {
   min-height: 0px;
@@ -40,82 +55,77 @@
   padding: 0px 10px 0px 10px;
 }
 #workspaces button.active {
-  color: red;
+  color: #24283b;
+  font-weight: bold;
+  background-color: #bb9af7;
+  border-radius: 7px;
 }
 
+/***************************/
+/* right modules */
+/***************************/
 #pulseaudio {
-  margin: 2px 2px 2px 2px;
+  margin: 0px 1px 0px 1px;
   padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 #backlight {
-  margin: 2px 2px 2px 2px;
-  padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 12px 0px 10px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 #cpu {
-  margin: 2px 2px 2px 2px;
-  padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 10px 0px 5px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 #memory {
-  margin: 2px 2px 2px 2px;
-  padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 10px 0px 5px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 #temperature {
-  margin: 2px 2px 2px 2px;
+  margin: 0px 1px 0px 1px;
   padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-}
-
-#keyboard-state label {
-  margin: 2px 2px 2px 2px;
-  padding: 0px 10px 0px 10px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-}
-#keyboard-state label.locked {
-  background-color: red;
-  border: 1px solid #330506;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 #battery {
-  margin: 2px 2px 2px 2px;
-  padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 10px 0px 5px;
+  background-color: #24283b;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+#battery.charging {
+  color: #000000;
+  background-color: lightgreen;
+}
+#battery.full {
+  color: #000000;
+  background-color: lightblue;
 }
 
 #clock {
+  color: #24283b;
   font-weight: bold;
-  margin: 2px 2px 2px 2px;
+  margin: 0px 1px 0px 1px;
   padding: 0px 5px 0px 5px;
-  background-color: grey;
-  color: black;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
+  background-color: #bb9af7;
+  border-radius: 10px;
+  border: 2px solid #000000;
 }

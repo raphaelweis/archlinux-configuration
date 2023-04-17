@@ -1,12 +1,11 @@
 {
-  "modules-left": ["mpris"],
+  "modules-left": ["custom/logo", "mpris", "keyboard-state"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
     "backlight",
     "cpu",
     "memory",
-    "keyboard-state",
     "battery",
     "clock"
   ],

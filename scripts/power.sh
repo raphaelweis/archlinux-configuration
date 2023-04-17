@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 chosen=$(printf "  Power Off\n  Restart" | rofi -dmenu -i)
 

@@ -1,5 +1,5 @@
 {
-  "modules-left": ["mpris"],
+  "modules-left": ["custom/logo", "mpris"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
