@@ -80,6 +80,8 @@ export BROWSER="firefox"
 export PDFVIEWER="/usr/bin/firefox"
 export VIMRC="$XDG_CONFIG_HOME/nvim/init.lua"
 export VIMCONFDIR="$XDG_CONFIG_HOME/nvim"
+export WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
+export SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
 #######################################
 # Functions
