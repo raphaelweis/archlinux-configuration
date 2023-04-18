@@ -1,9 +1,9 @@
 #! /bin/bash
 
-chosen=$(printf "  Power Off\n  Restart" | rofi -dmenu -i)
+chosen=$(printf "  Power Off\n  Reboot" | rofi -dmenu -i)
 
 case "$chosen" in
 	"  Power Off") poweroff ;;
-	"  Restart") reboot ;;
+	"  Reboot") reboot ;;
 	*) exit 1 ;;
 esac
