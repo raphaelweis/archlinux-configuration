@@ -1,4 +1,13 @@
 {
+  "include": "$XDG_CONFIG_HOME/waybar/config-general.jsonc",
+  "output": "eDP-1",
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "spacing": 0,
+  "margin-top": 5,
+  "margin-left": 5,
+  "margin-right": 5,
   "modules-left": ["custom/logo", "mpris"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [

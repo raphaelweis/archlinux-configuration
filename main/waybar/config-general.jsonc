@@ -1,9 +1,10 @@
 {
-  // Modules configuration
+  // modules configuration
   "custom/logo": {
     "format": "",
     "on-click": "rofi -show run"
   },
+
   "mpris": {
     "format": "{status_icon} {artist} - {title} {player_icon}",
     "format-paused": "{status_icon} {artist} - {title} {player_icon}",
@@ -20,6 +21,7 @@
     },
     "on-click": "playerctl play-pause"
   },
+
   "keyboard-state": {
     "capslock": true,
     "format": "{icon}",
@@ -28,6 +30,40 @@
       "unlocked": ""
     }
   },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon} | {format_source}",
+    "format-muted": "婢 | {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": ["", "", "墳", ""]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "{usage:2}% "
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": "{used:5}GiB "
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+
   "battery": {
     "states": {
       "warning": 30,
@@ -40,36 +76,8 @@
     "format-alt": "{time} {icon}",
     "format-icons": [" ", " ", " ", " ", " "]
   },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
-  },
+
   "clock": {
     "format-alt": "{:%Y-%m-%d}"
-  },
-  "cpu": {
-    "interval": 1,
-    "format": "{usage:2}% "
-  },
-  "memory": {
-    "interval": 1,
-    "format": "{used:5}GiB "
-  },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon} | {format_source}",
-    "format-muted": "婢 | {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-      "default": ["", "", "墳", ""]
-    },
-    "on-click": "pavucontrol",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   }
 }
