@@ -1,7 +1,11 @@
+#!/bin/bash
+
+WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
+
 DEFAULT_WALLPAPER="$WALLPAPERS_DIR/default/wall"
 
 # pick a wallpaper with rofi
-chosen=$(ls ~/Pictures/wallpapers | rofi -dmenu -i)
+chosen=$(ls $WALLPAPERS_DIR | rofi -dmenu -i)
 
 # copy chosen wallpaper to the default wallpaper directory and rename it to wall
 cp "$WALLPAPERS_DIR/$chosen" "$DEFAULT_WALLPAPER"
