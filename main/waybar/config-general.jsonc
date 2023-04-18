@@ -10,13 +10,15 @@
     "player-icons": {
       "default": "",
       "spotify": "",
-      "firefox": ""
+      "firefox": "",
+      "chromium": ""
     },
     "status-icons": {
-      "paused": "",
-      "playing": "",
+      "paused": "",
+      "playing": "",
       "stopped": ""
-    }
+    },
+    "on-click": "playerctl play-pause"
   },
   "keyboard-state": {
     "capslock": true,
@@ -61,14 +63,13 @@
   },
   "pulseaudio": {
     "format": "{volume}% {icon} | {format_source}",
-    // "format-bluetooth": "{volume}% {icon} | {format_source}",
-    // "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": "婢 | {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
       "default": ["", "", "墳", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   }
 }
