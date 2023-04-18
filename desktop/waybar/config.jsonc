@@ -1,0 +1,32 @@
+{
+  "modules-left": ["custom/logo", "mpris"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "temperature",
+    "keyboard-state",
+    "clock"
+  ],
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "active-only": false,
+    "sort-by-number": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
+    }
+  }
+}
