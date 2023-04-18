@@ -1,6 +1,6 @@
 [
   {
-    "include": "$XDG_CONFIG_HOME/waybar/config-modules.jsonc",
+    "include": "$XDG_CONFIG_HOME/waybar/config-general.jsonc",
     "output": "eDP-1",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -40,7 +40,7 @@
     }
   },
   {
-    "include": "$XDG_CONFIG_HOME/waybar/config-modules.jsonc",
+    "include": "$XDG_CONFIG_HOME/waybar/config-general.jsonc",
     "output": "HDMI-A-1",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -75,7 +75,7 @@
     }
   },
   {
-    "include": "$XDG_CONFIG_HOME/waybar/config-modules.jsonc",
+    "include": "$XDG_CONFIG_HOME/waybar/config-general.jsonc",
     "output": "DP-3",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)

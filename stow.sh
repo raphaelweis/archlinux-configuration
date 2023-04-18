@@ -1,22 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 
 # stow hosts first
 if [ "$(hostname)" = "archlinux-desktop" ]; then
   # stow package for desktop
-  stow desktop -t ~/.config/
+  stow -R desktop -t ~/.config/
 elif [ "$(hostname)" = "archlinux-laptop" ]; then
   # stow packages for laptop
-  stow laptop -t ~/.config/
+  stow -R laptop -t ~/.config/
 else
   echo "Unknown host: $(hostname)"
 fi
 
 # stow main second
-stow main -t ~/.config
+stow -R main -t ~/.config
 
 # stow scripts third
-stow scripts -t ~/.local/bin
+stow -R scripts -t ~/.local/bin
 
 # stow special packages
-stow -d ./special wrappedhl -t ~/.local/bin/
-stow -d ./special zshenv -t ~/
+stow -R -d ./special wrappedhl -t ~/.local/bin/
+stow -R -d ./special zshenv -t ~/

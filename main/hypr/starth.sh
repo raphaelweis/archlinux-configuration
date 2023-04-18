@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
  #check if Hyprland process is running then redirect stdout and stderr to null output
 if ps aux | grep Hyprland | grep -v grep &> /dev/null; then
