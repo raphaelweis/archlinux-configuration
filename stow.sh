@@ -5,6 +5,10 @@ if [ ! -d "$WALLPAPERS_DIR" ]; then
     mkdir -p "$WALLPAPERS_DIR"
 fi
 
+if [ ! -d "$WALLPAPERS_DIR/default" ]; then
+    mkdir -p "$WALLPAPERS_DIR/default"
+fi
+
 # stow hosts first
 if [ "$(hostname)" = "archlinux-desktop" ]; then
   # stow package for desktop

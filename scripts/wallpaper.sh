@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chosen=$(ls ~/Pictures/wallpapers | rofi -dmenu -i)
+swww img "$WALLPAPERS_DIR/default/wall"
