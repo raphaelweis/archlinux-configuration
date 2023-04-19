@@ -1,5 +1,4 @@
 {
-  // modules configuration
   "custom/logo": {
     "format": "",
     "on-click": "rofi -show run"
@@ -29,6 +28,12 @@
       "locked": "",
       "unlocked": ""
     }
+  },
+
+  "custom/recording": {
+    "exec": "exec $XDG_CONFIG_HOME/waybar/scripts/record-widget.sh",
+    "exec-on-event": false,
+    "on-click": "pkill -INT -P \"$(pgrep -xo record.sh)\" wf-recorder"
   },
 
   "pulseaudio": {

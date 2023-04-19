@@ -48,6 +48,31 @@
   background-color: red;
 }
 
+#custom-recording {
+  color: red;
+  font-size: 20px;
+  margin: 0px 1px 0px 1px;
+  padding: 0px 10px 0px 10px;
+  background-color: @background-color;
+  border-radius: 10px;
+  border: 2px solid @border-color;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes blink {
+  0% {
+    color: @background-color;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: @background-color;
+  }
+}
+
 /***************************/
 /* center modules */
 /***************************/

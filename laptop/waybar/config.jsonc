@@ -9,7 +9,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/logo", "mpris", "keyboard-state"],
+    "modules-left": ["custom/logo", "mpris", "keyboard-state", "custom/recording"],
     "modules-center": ["wlr/workspaces"],
     "modules-right": [
       "pulseaudio",
@@ -49,7 +49,7 @@
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    "modules-left": ["custom/logo", "mpris", "keyboard-state"],
+    "modules-left": ["custom/logo", "mpris", "keyboard-state", "custom/recording"],
     "modules-center": ["wlr/workspaces"],
     "modules-right": [
       "pulseaudio",
