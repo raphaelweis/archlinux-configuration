@@ -3,7 +3,6 @@ vim.g.mapleader = " " -- define space as leader key
 
 -- general keymaps
 vim.keymap.set("i", "jk", "<ESC>") -- use jk to exit insert mode
-vim.keymap.set("i", "kj", "<ESC>") -- use kj to exit insert mode
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>") -- remove highlighting after search
 vim.keymap.set("n", "<leader>quit", "<cmd>wqa!<CR>") -- quit neovim
 

@@ -19,6 +19,9 @@ source $HOME/.antidote/antidote.zsh
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
+# define jk as the escape key for zsh-vi-mode (to match the vim configuration)
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+
 # source zsh theme (powerlevel10k)
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
@@ -39,9 +42,6 @@ setopt autocd extendedglob # typing a path to a directory will auto cd into it
 
 #
 unsetopt beep # disable beep when errors occur
-
-# Keybinds: vi
-bindkey -v
 
 # Keybinds: zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up
