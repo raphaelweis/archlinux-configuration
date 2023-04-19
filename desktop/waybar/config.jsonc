@@ -8,7 +8,7 @@
   "margin-top": 5,
   "margin-left": 5,
   "margin-right": 5,
-  "modules-left": ["custom/logo", "mpris"],
+  "modules-left": ["custom/logo", "mpris", "custom/recording"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
