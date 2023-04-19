@@ -13,20 +13,39 @@ fi
 # Plugins
 #######################################
 
-# source antidote
-source $HOME/.antidote/antidote.zsh
+# directory to store the git repositories
+ZSH_PLUGINS_DIR="$ZDOTDIR/plugins"
 
-# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
-antidote load
+# zsh theme: powerlevel10k
+if [ ! -d $ZSH_PLUGINS_DIR/powerlevel10k ]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_PLUGINS_DIR/powerlevel10k
+fi
+source $ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme
+source $ZDOTDIR/.p10k.zsh
 
-# define jk as the escape key for zsh-vi-mode (to match the vim configuration)
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+# zsh syntax highlighting
+if [ ! -d $ZSH_PLUGINS_DIR/zsh-syntax-highlighting ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_PLUGINS_DIR/zsh-syntax-highlighting
+fi
+source $ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# source zsh theme (powerlevel10k)
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+# zsh auto suggestions
+if [ ! -d $ZSH_PLUGINS_DIR/zsh-autosuggestions ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_PLUGINS_DIR/zsh-autosuggestions
+fi
+source $ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# source zsh history substring search
-source $ZDOTDIR/zsh-history-substring-search.zsh
+# zsh completions
+if [ ! -d $ZSH_PLUGINS_DIR/zsh-completions ]; then
+  git clone https://github.com/zsh-users/zsh-completions.git $ZSH_PLUGINS_DIR/zsh-completions
+fi
+fpath=($ZSH_PLUGINS_DIR/zsh-completions/src $fpath)
+
+# zsh history sub string search
+if [ ! -d $ZSH_PLUGINS_DIR/zsh-history-substring-search ]; then
+  git clone https://github.com/zsh-users/zsh-history-substring-search.git $ZSH_PLUGINS_DIR/zsh-history-substring-search
+fi
+source $ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #######################################
 # General Configuration
@@ -42,6 +61,11 @@ setopt autocd extendedglob # typing a path to a directory will auto cd into it
 
 #
 unsetopt beep # disable beep when errors occur
+
+# vi mode
+bindkey -v vi
+bindkey 'jk' vi-cmd-mode
+bindkey "^?" backward-delete-char # to make backspace work
 
 # Keybinds: zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up
