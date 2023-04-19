@@ -29,5 +29,6 @@ local opts = {
 			fg = c.bg_dark,
 		}
 	end,
+	transparent = true,
 }
 return opts

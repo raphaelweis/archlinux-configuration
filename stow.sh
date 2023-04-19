@@ -1,12 +1,24 @@
 #!/bin/bash
 
 # check if required directories exist if not create them
+
+WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
+SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
+RECORDINGS_DIR="$HOME/Pictures/recordings"
+
 if [ ! -d "$WALLPAPERS_DIR" ]; then
     mkdir -p "$WALLPAPERS_DIR"
 fi
-
 if [ ! -d "$WALLPAPERS_DIR/default" ]; then
     mkdir -p "$WALLPAPERS_DIR/default"
+fi
+
+if [ ! -d "$SCREENSHOTS_DIR" ]; then
+    mkdir -p "$SCREENSHOTS_DIR"
+fi
+
+if [ ! -d "$RECORDINGS_DIR" ]; then
+    mkdir -p "$RECORDINGS_DIR"
 fi
 
 # stow hosts first

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ ! -d "$SCREENSHOTS_DIR" ]; then
-    mkdir -p "$SCREENSHOTS_DIR"
-fi
+SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
-screenshot=$SCREENSHOTS_DIR/$(date +%Y-%m-%d-%H-%M-%S).png
+screenshot="$SCREENSHOTS_DIR/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png"
 grim -g "$(slurp)" "$screenshot"
 wl-copy < "$screenshot"

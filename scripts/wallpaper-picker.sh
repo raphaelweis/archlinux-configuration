@@ -11,4 +11,4 @@ chosen=$(ls $WALLPAPERS_DIR | rofi -dmenu -i)
 cp "$WALLPAPERS_DIR/$chosen" "$DEFAULT_WALLPAPER"
 
 # select default wallpaper as current one with swww
-swww img "$DEFAULT_WALLPAPER"
+swww img --transition-type center "$DEFAULT_WALLPAPER"
