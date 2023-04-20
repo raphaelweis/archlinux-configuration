@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the number of connected monitors
+num_monitors=$(xrandr --query | grep " connected" | wc -l)
+
+# Check if the number of connected monitors is greater than or equal to 2
+if [ "$num_monitors" -ge 2 ]; then
+  # If so, disable the laptop's monitor
+  hyprctl keyword monitors eDP-1 disable 
+fi

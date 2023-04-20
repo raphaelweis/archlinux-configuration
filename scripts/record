@@ -2,7 +2,7 @@
 
 RECORDINGS_DIR="$HOME/Pictures/recordings"
 
-if ! pkill -INT -P "$(pgrep -xo record.sh)" wf-recorder 2>/dev/null; then
+if ! pkill -INT -P "$(pgrep -xo record)" wf-recorder 2>/dev/null; then
 
   geometry="$(slurp -d)"
 
