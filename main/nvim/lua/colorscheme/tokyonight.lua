@@ -1,4 +1,7 @@
 require("tokyonight").setup({
-	transparent = true,
+	transparent = false,
+	styles = {
+		floats = "light",
+	},
 })
 vim.cmd([[colorscheme tokyonight]])

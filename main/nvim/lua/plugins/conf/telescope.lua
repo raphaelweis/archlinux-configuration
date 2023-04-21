@@ -6,6 +6,7 @@ end
 
 telescope.setup({
 	defaults = {
+		-- winblend = 100,
 		prompt_prefix = "   ",
 		selection_caret = " ",
 		entry_prefix = " ",
@@ -14,6 +15,16 @@ telescope.setup({
 		path_display = { truncate = 3 },
 		layout_config = {
 			prompt_position = "top",
+		},
+		borderchars = {
+			"─", -- top
+			"│", -- right
+			"─", -- bottom
+			"│", -- left
+			"┌", -- top-left
+			"┐", -- top-right
+			"┘", -- bottom-right
+			"└", -- bottom-left
 		},
 	},
 })
