@@ -15,72 +15,89 @@ vim.opt.rtp:prepend(lazypath)
 -- plugins table
 local plugins = {
 	{
-		"ellisonleao/gruvbox.nvim", -- colorscheme plugin 1
+		"akinsho/bufferline.nvim", -- bufferline with tabs
+		priority = 50,
+		config = function()
+			require("plugins.conf.bufferline")
+		end,
+	},
+	{
+		"akinsho/toggleterm.nvim", -- pop-up terminal inside neovim
+		priority = 50,
+		config = function()
+			require("plugins.conf.toggleterm")
+		end,
+	},
+	{
+		"andrewferrier/wrapping.nvim", -- for better wrapping in natural text documents
+		priority = 50,
+		config = function()
+			require("plugins.conf.wrapping")
+		end,
+	},
+	{
+		"catppuccin/nvim", -- colorscheme plugin
 		lazy = false,
+		priority = 1000,
+		config = function()
+			require("colorscheme.catppuccin")
+		end,
+	},
+	{
+		"elkowar/yuck.vim", -- syntax highlighting for custom lisp like language - see EWW Widgets on github
+		priority = 50,
+		config = function()
+			require("plugins.conf.yuck")
+		end,
+	},
+	{
+		"ellisonleao/gruvbox.nvim", -- colorscheme plugin
 		priority = 1000, -- to ensure that the colorscheme gets loaded first
-		config = GruvboxConfig, -- plugin configuration call
+		config = function()
+			require("colorscheme.gruvbox") -- plugin configuration call
+		end,
 	},
 	{
-		"folke/tokyonight.nvim", -- colorscheme plugin 2
+		"folke/neodev.nvim", -- completion and documentation for lua neovim config and API's
+		priority = 50,
+		config = function()
+			require("plugins.conf.neodev")
+		end,
+	},
+	{
+		"folke/tokyonight.nvim", -- colorscheme plugin
 		lazy = false,
 		priority = 1000,
-		config = TokyonightConfig,
+		config = function()
+			require("colorscheme.tokyonight")
+		end
 	},
 	{
-		"sam4llis/nvim-tundra", -- colorscheme plugin 3
-		lazy = false,
-		priority = 1000,
-		config = TundraConfig,
+		"folke/which-key.nvim", -- pop-up menu that shows possible keybinds after pressing a key
+		priority = 50,
+		config = function()
+			require("plugins.conf.which-key")
+		end,
 	},
 	{
-		"catppuccin/nvim", -- colorscheme plugin 4
-		lazy = false,
-		priority = 1000,
-		config = CatppuccinConfig,
+		"glepnir/lspsaga.nvim", -- additional lsp functionnality
+		event = "BufRead",
+		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
+		config = function()
+    		require("plugins.conf.lspsaga")
+		end,
 	},
 	{
-		"lunarvim/Onedarker.nvim", -- colorscheme plugin 5
-		lazy = false,
-		priority = 1000,
-		config = OneDarkerConfig,
-	},
-	{ "folke/which-key.nvim" }, -- pop-up menu that shows possible keybinds after pressing a key
-	{ "windwp/nvim-autopairs" }, -- automatically insert closing brackets, parenthesis, quotes, etc
-	{ "numToStr/Comment.nvim" }, -- automatically comment lines or blocks of code
-	{ "akinsho/toggleterm.nvim" }, -- pop-up terminal inside neovim
-	{ "goolord/alpha-nvim", dependencies = "nvim-tree/nvim-web-devicons" }, -- neovim welcome screen
-	{
-		"nvim-lualine/lualine.nvim", -- status line
-		lazy = false,
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
-	{
-		"nvim-neo-tree/neo-tree.nvim", -- file explorer
-		branch = "v2.x",
-		dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
-	},
-	{
-		"nvim-treesitter/nvim-treesitter", -- better syntax highlighting (among other things)
-		build = ":TSUpdate",
-		dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
-	},
-	{
-		"nvim-telescope/telescope.nvim", -- fuzzy finder for neovim
-		tag = "0.1.1",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"BurntSushi/ripgrep",
-			"nvim-telescope/telescope-fzf-native.nvim",
-			"nvim-telescope/telescope-ui-select.nvim",
-		},
-	},
-	{
-		"nvim-telescope/telescope-fzf-native.nvim", -- fzf algorithm to make telescope fuzzy finder faster
-		build = "make",
-		dependencies = { "nvim-telescope/telescope.nvim" },
+		"goolord/alpha-nvim", -- neovim welcome screen
+		priority = 50,
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("plugins.conf.alpha-nvim")
+		end,
 	},
 	{
 		"hrsh7th/nvim-cmp", -- autocompletion
+		priority = 50,
 		dependencies = {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
@@ -88,43 +105,188 @@ local plugins = {
 			"hrsh7th/cmp-nvim-lsp",
 			"L3MON4D3/LuaSnip",
 		},
+		config = function()
+			require("plugins.conf.nvim-cmp")
+		end,
 	},
-	{ "rafamadriz/friendly-snippets" },
 	{
-		"williamboman/mason.nvim", -- gui for managing language servers, formatters and linters
-		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
+		"iamcco/markdown-preview.nvim", -- to preview markdown documents
+		priority = 50,
+		build = "cd app && npm install",
+		config = function()
+			require("plugins.conf.markdown-preview")
+		end,
 	},
-	{ "mfussenegger/nvim-dap" }, -- nvim DAP - debug adapter protocol
 	{
 		"jose-elias-alvarez/null-ls.nvim", -- formatters and linters installation and configuration
+		priority = 50,
 		dependencies = "jay-babu/mason-null-ls.nvim",
+		config = function()
+			require("plugins.conf.null-ls")
+		end,
 	},
 	{
-		"glepnir/lspsaga.nvim", -- additional lsp functionnality
-		event = "BufRead",
-		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
+		"lervag/vimtex", -- for LaTeX documents
+		priority = 50,
+		config = function()
+			require("plugins.conf.vimtex")
+		end,
 	},
-	{ "Tastyep/structlog.nvim" }, -- more structured login messages
-	{ "rcarriga/nvim-notify" }, -- notifications
-	{ "folke/neodev.nvim" }, -- completion and documentation for lua neovim config and API's
-	{ "lewis6991/gitsigns.nvim" }, -- git decoration on sidebar
-	{ "akinsho/bufferline.nvim" }, -- bufferline with tabs
-	{ "lukas-reineke/indent-blankline.nvim" }, -- indent guides (like in vs code)
-	{ "eraserhd/parinfer-rust", build = "cargo build --release" }, -- to work with lisp expressions
-	{ "iamcco/markdown-preview.nvim", build = "cd app && npm install" }, -- to preview markdown documents
-	{ "andrewferrier/wrapping.nvim" }, -- for better wrapping in natural text documents
-	{ "Pocco81/true-zen.nvim" }, -- toggle between modes for zen coding
-	{ "Shatur/neovim-session-manager" }, -- manage sessions in vscode fashion
-	{ "stevearc/dressing.nvim" }, -- UI beautyfier
-	{ "ziontee113/icon-picker.nvim" }, -- icon and special character picker
+	{
+		"lewis6991/gitsigns.nvim", -- git decoration on sidebar
+		priority = 50,
+		config = function()
+			require("plugins.conf.gitsigns")
+		end,
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim", -- indent guides (like in vs code)
+		priority = 50,
+		config = function()
+			require("plugins.conf.indent-blankline")
+		end,
+	},
+	{
+		"lunarvim/Onedarker.nvim", -- colorscheme plugin
+		lazy = false,
+		priority = 1000,
+		dependencies = nil,
+		config = function()
+			require("colorscheme.onedarker")
+		end,
+	},
+	{
+		"mfussenegger/nvim-dap", -- nvim DAP - debug adapter protocol
+		priority = 50,
+		config = function()
+			require("plugins.conf.nvim-dap")
+		end,
+	},
+	{
+		"numToStr/Comment.nvim", -- automatically comment lines or blocks of code
+		priority = 50,
+		dependencies = nil,
+		config = function()
+			require("plugins.conf.comment")
+		end,
+	},
+	{
+		"nvim-lualine/lualine.nvim", -- status line
+		priority = 50,
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("plugins.conf.lualine")
+		end,
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim", -- file explorer
+		priority = 50,
+		branch = "v2.x",
+		dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
+		config = function()
+			require("plugins.conf.nvim-neo-tree")
+		end,
+	},
+	{
+		"nvim-telescope/telescope.nvim", -- fuzzy finder for neovim
+		priority = 50,
+		tag = "0.1.1",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"BurntSushi/ripgrep",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			"nvim-telescope/telescope-ui-select.nvim",
+		},
+		config = function()
+			require("plugins.conf.telescope")
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter", -- better syntax highlighting (among other things)
+		priority = 50,
+		build = ":TSUpdate",
+		dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
+		config = function()
+			require("plugins.conf.nvim-treesitter")
+		end,
+	},
+	{
+		"Pocco81/true-zen.nvim", -- toggle between modes for zen coding
+		priority = 50,
+		config = function()
+			require("plugins.conf.true-zen")
+		end,
+	},
+	{
+		"rafamadriz/friendly-snippets", -- snippets collections for all filetypes
+		priority = 50,
+		config = function()
+			require("plugins.conf.friendly-snippets")
+		end,
+	},
+	{
+		"rcarriga/nvim-notify", -- notifications
+		priority = 50,
+		config = function()
+			require("plugins.conf.nvim-notify")
+		end,
+	},
+	{
+		"sam4llis/nvim-tundra", -- colorscheme plugin
+		lazy = false,
+		priority = 1000,
+		dependencies = nil,
+		config = function()
+			require("colorscheme.tundra")
+		end,
+	},
+	{
+		"Shatur/neovim-session-manager", -- manage sessions in vscode fashion
+		priority = 50,
+		config = function()
+			require("plugins.conf.neovim-session-manager")
+		end,
+	},
+	{
+		"Tastyep/structlog.nvim", -- more structured login messages
+		priority = 50,
+		config = function()
+			require("plugins.conf.structlog")
+		end,
+	},
+	{
+		"tpope/vim-fugitive", -- the Lebron James equivalent of vim plugins
+		priority = 50,
+		config = function()
+			require("plugins.conf.vim-fugitive")
+		end,
+	},
+	{
+		"windwp/nvim-autopairs", -- automatically insert closing brackets, parenthesis, quotes, etc
+		priority = 50,
+		dependencies = nil,
+		config = function()
+			require("plugins.conf.nvim-autopairs")
+		end,
+	},
+	{
+		"williamboman/mason.nvim", -- gui for managing language servers, formatters and linters
+		priority = 50,
+		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
+		config = function()
+			require("plugins.conf.mason")
+		end,
+	},
+	{
+		"ziontee113/icon-picker.nvim", -- icon and special character picker
+		priority = 50,
+		config = function()
+			require("plugins.conf.icon-picker")
+		end,
+	},
 
-	-- vimscript plugins
-	{ "elkowar/yuck.vim" }, -- syntax highlighting for custom lisp like language - see EWW Widgets on github
-	{ "lervag/vimtex" }, -- for LaTeX documents
-	{ "tpope/vim-fugitive" }, -- the Lebron James equivalent of vim plugins
-
-	-- deprecated plugins (the configuration for those still exists, but they are not in use)
-	-- { "ahmedkhalf/project.nvim" }, -- project management plugin
+	-- deprecated plugins list (the configuration for those still exists, but they are not in use)
+	-- "ahmedkhalf/project.nvim" | project management plugin
 }
 
 -- options table

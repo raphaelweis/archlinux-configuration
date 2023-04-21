@@ -17,7 +17,6 @@ treesitter_configs.setup({
 		"json",
 		"markdown",
 		"markdown_inline",
-		"help",
 		"hocon",
 	}, -- ensure these treesitter parsers are installed
 	highlight = {
