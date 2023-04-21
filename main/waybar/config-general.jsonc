@@ -7,6 +7,8 @@
   "mpris": {
     "format": "{status_icon} {artist} - {title} {player_icon}",
     "format-paused": "{status_icon} {artist} - {title} {player_icon}",
+    "artist-len": 50,
+    "title-len": 50,
     "player-icons": {
       "default": "",
       "spotify": "",
@@ -31,6 +33,7 @@
   },
 
   "custom/recording": {
+    "format": "{}",
     "exec": "exec $XDG_CONFIG_HOME/waybar/scripts/record-widget",
     "exec-on-event": false,
     "on-click": "pkill -INT -P \"$(pgrep -xo record)\" wf-recorder"
