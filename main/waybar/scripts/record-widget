@@ -8,7 +8,7 @@ update() {
   if [ "$recordings" -gt 0 ]; then
     echo "雷"
   else
-    echo
+    echo ""
   fi
 }
 
@@ -22,13 +22,8 @@ end_record() {
   update
 }
 
-cleanup() {
-  rm "/tmp/record-widget.pid"
-}
-
 trap begin_record SIGUSR1
 trap end_record SIGUSR2
-trap cleanup EXIT
 
 while true; do
   sleep 0.1

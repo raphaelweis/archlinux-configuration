@@ -3,7 +3,6 @@
 RECORDINGS_DIR="$HOME/Pictures/recordings"
 
 if ! pkill -INT -P "$(pgrep -xo record)" wf-recorder 2>/dev/null; then
-
   geometry="$(slurp -d)"
 
   if [ -n "$geometry" ]; then
@@ -17,6 +16,4 @@ if ! pkill -INT -P "$(pgrep -xo record)" wf-recorder 2>/dev/null; then
     notify-send "Recording stopped" "the recording has been saved to<br>$recording" -i "$XDG_CONFIG_HOME/dunst/icons/new-video-icon-black.png"
     pkill -USR2 -F "/tmp/record-widget.pid"
   fi
-else
-  pkill -USR2 -F "/tmp/record-widget.pid"
 fi
