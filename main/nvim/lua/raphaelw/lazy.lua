@@ -25,7 +25,6 @@ local plugins = {
 	},
 	{
 		"catppuccin/nvim", -- colorscheme plugin
-		lazy = false,
 	},
 	{
 		"elkowar/yuck.vim", -- syntax highlighting for custom lisp like language - see EWW Widgets on github
@@ -38,8 +37,6 @@ local plugins = {
 	},
 	{
 		"folke/tokyonight.nvim", -- colorscheme plugin
-		lazy = false,
-		priority = 1000,
 	},
 	{
 		"folke/which-key.nvim", -- pop-up menu that shows possible keybinds after pressing a key
@@ -63,16 +60,12 @@ local plugins = {
 	},
 	{
 		"lunarvim/Onedarker.nvim", -- colorscheme plugin
-		lazy = false,
-		priority = 1000,
-		dependencies = nil,
 	},
 	{
 		"mfussenegger/nvim-dap", -- nvim DAP - debug adapter protocol
 	},
 	{
 		"numToStr/Comment.nvim", -- automatically comment lines or blocks of code
-		dependencies = nil,
 	},
 	{
 		"nvim-lualine/lualine.nvim", -- status line
@@ -109,13 +102,9 @@ local plugins = {
 	},
 	{
 		"rose-pine/neovim",
-		priority = 1000,
 	},
 	{
 		"sam4llis/nvim-tundra", -- colorscheme plugin
-		lazy = false,
-		priority = 1000,
-		dependencies = nil,
 	},
 	{
 		"Shatur/neovim-session-manager", -- manage sessions in vscode fashion
@@ -150,7 +139,6 @@ local plugins = {
 	},
 	{
 		"windwp/nvim-autopairs", -- automatically insert closing brackets, parenthesis, quotes, etc
-		dependencies = nil,
 	},
 	{
 		"ziontee113/icon-picker.nvim", -- icon and special character picker

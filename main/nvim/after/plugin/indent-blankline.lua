@@ -5,5 +5,5 @@ end
 
 indent_blankline.setup({
 	show_current_context_start = true,
-	filetype_exclude = { "markdown" },
+	filetype_exclude = { "markdown", "help" },
 })

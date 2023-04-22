@@ -28,5 +28,3 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>") -- close current tab
 
 -- spell checking
 vim.keymap.set("n", "<leader>ww", "<cmd>set spell!<CR>") -- toggle spell checking
-
--- plugin specific keymaps

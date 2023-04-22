@@ -23,26 +23,8 @@ vim.opt.splitbelow = true -- split horizontal windows to the bottom
 vim.opt.spelllang = { "en", "fr" }
 vim.opt.spellfile = os.getenv("VIMCONFDIR") .. "/spell/dictionary.add" -- custom dictionary
 
------------------------------
--- else
------------------------------
-
 -- save all if SIGHUP signal gets sent
 vim.opt.autowriteall = true
 
 -- enable mouse movement
 vim.opt.mousemoveevent = true -- for bufferline - might cause problems
-
--- change indentation size to 4 only on php files
-vim.cmd([[ 
-augroup PHPSettings
-  autocmd!
-  autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
-augroup END
-]])
-
--- enable automatic line wrapping for markdown buffers - 80 characters max
-vim.cmd("autocmd FileType markdown,tex setlocal wrap")
-vim.cmd("autocmd FileType markdown,tex setlocal linebreak")
-vim.cmd("autocmd FileType markdown,tex setlocal nolist")
-vim.cmd("autocmd FileType markdown,tex setlocal textwidth=80")

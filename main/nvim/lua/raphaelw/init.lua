@@ -1,9 +1,13 @@
 -- core functionality
-require("raphaelw.core.keymaps")
-require("raphaelw.core.options")
+require("raphaelw.keymaps")
+require("raphaelw.options")
 
--- plugins
-require("raphaelw.plugins.plugins-declaration")
+-- plugins declaration
+require("raphaelw.lazy")
 
--- colorscheme
-vim.cmd([[ colorscheme rose-pine ]])
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  callback = function()
+    vim.cmd([[ colorscheme rose-pine ]])
+  end,
+})
