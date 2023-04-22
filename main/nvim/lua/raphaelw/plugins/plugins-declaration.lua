@@ -232,6 +232,13 @@ local plugins = {
 		end,
 	},
 	{
+		"rose-pine/neovim",
+		priority = 1000,
+		config = function()
+			require("raphaelw.colorscheme.rose-pine")
+		end,
+	},
+	{
 		"sam4llis/nvim-tundra", -- colorscheme plugin
 		lazy = false,
 		priority = 1000,

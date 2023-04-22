@@ -16,16 +16,6 @@ telescope.setup({
 		layout_config = {
 			prompt_position = "top",
 		},
-		borderchars = {
-			"─", -- top
-			"│", -- right
-			"─", -- bottom
-			"│", -- left
-			"┌", -- top-left
-			"┐", -- top-right
-			"┘", -- bottom-right
-			"└", -- bottom-left
-		},
 	},
 })
 
