@@ -18,21 +18,21 @@ local plugins = {
 		"akinsho/bufferline.nvim", -- bufferline with tabs
 		priority = 50,
 		config = function()
-			require("plugins.conf.bufferline")
+			require("raphaelw.plugins.conf.bufferline")
 		end,
 	},
 	{
 		"akinsho/toggleterm.nvim", -- pop-up terminal inside neovim
 		priority = 50,
 		config = function()
-			require("plugins.conf.toggleterm")
+			require("raphaelw.plugins.conf.toggleterm")
 		end,
 	},
 	{
 		"andrewferrier/wrapping.nvim", -- for better wrapping in natural text documents
 		priority = 50,
 		config = function()
-			require("plugins.conf.wrapping")
+			require("raphaelw.plugins.conf.wrapping")
 		end,
 	},
 	{
@@ -40,28 +40,28 @@ local plugins = {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("colorscheme.catppuccin")
+			require("raphaelw.colorscheme.catppuccin")
 		end,
 	},
 	{
 		"elkowar/yuck.vim", -- syntax highlighting for custom lisp like language - see EWW Widgets on github
 		priority = 50,
 		config = function()
-			require("plugins.conf.yuck")
+			require("raphaelw.plugins.conf.yuck")
 		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim", -- colorscheme plugin
 		priority = 1000, -- to ensure that the colorscheme gets loaded first
 		config = function()
-			require("colorscheme.gruvbox") -- plugin configuration call
+			require("raphaelw.colorscheme.gruvbox") -- plugin configuration call
 		end,
 	},
 	{
 		"folke/neodev.nvim", -- completion and documentation for lua neovim config and API's
 		priority = 50,
 		config = function()
-			require("plugins.conf.neodev")
+			require("raphaelw.plugins.conf.neodev")
 		end,
 	},
 	{
@@ -69,14 +69,14 @@ local plugins = {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("colorscheme.tokyonight")
-		end
+			require("raphaelw.colorscheme.tokyonight")
+		end,
 	},
 	{
 		"folke/which-key.nvim", -- pop-up menu that shows possible keybinds after pressing a key
 		priority = 50,
 		config = function()
-			require("plugins.conf.which-key")
+			require("raphaelw.plugins.conf.which-key")
 		end,
 	},
 	{
@@ -84,7 +84,7 @@ local plugins = {
 		event = "BufRead",
 		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
 		config = function()
-    		require("plugins.conf.lspsaga")
+			require("raphaelw.plugins.conf.lspsaga")
 		end,
 	},
 	{
@@ -92,7 +92,7 @@ local plugins = {
 		priority = 50,
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
-			require("plugins.conf.alpha-nvim")
+			require("raphaelw.plugins.conf.alpha-nvim")
 		end,
 	},
 	{
@@ -106,7 +106,7 @@ local plugins = {
 			"L3MON4D3/LuaSnip",
 		},
 		config = function()
-			require("plugins.conf.nvim-cmp")
+			require("raphaelw.plugins.conf.nvim-cmp")
 		end,
 	},
 	{
@@ -114,7 +114,7 @@ local plugins = {
 		priority = 50,
 		build = "cd app && npm install",
 		config = function()
-			require("plugins.conf.markdown-preview")
+			require("raphaelw.plugins.conf.markdown-preview")
 		end,
 	},
 	{
@@ -122,28 +122,28 @@ local plugins = {
 		priority = 50,
 		dependencies = "jay-babu/mason-null-ls.nvim",
 		config = function()
-			require("plugins.conf.null-ls")
+			require("raphaelw.plugins.conf.null-ls")
 		end,
 	},
 	{
 		"lervag/vimtex", -- for LaTeX documents
 		priority = 50,
 		config = function()
-			require("plugins.conf.vimtex")
+			require("raphaelw.plugins.conf.vimtex")
 		end,
 	},
 	{
 		"lewis6991/gitsigns.nvim", -- git decoration on sidebar
 		priority = 50,
 		config = function()
-			require("plugins.conf.gitsigns")
+			require("raphaelw.plugins.conf.gitsigns")
 		end,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim", -- indent guides (like in vs code)
 		priority = 50,
 		config = function()
-			require("plugins.conf.indent-blankline")
+			require("raphaelw.plugins.conf.indent-blankline")
 		end,
 	},
 	{
@@ -152,14 +152,14 @@ local plugins = {
 		priority = 1000,
 		dependencies = nil,
 		config = function()
-			require("colorscheme.onedarker")
+			require("raphaelw.colorscheme.onedarker")
 		end,
 	},
 	{
 		"mfussenegger/nvim-dap", -- nvim DAP - debug adapter protocol
 		priority = 50,
 		config = function()
-			require("plugins.conf.nvim-dap")
+			require("raphaelw.plugins.conf.nvim-dap")
 		end,
 	},
 	{
@@ -167,7 +167,7 @@ local plugins = {
 		priority = 50,
 		dependencies = nil,
 		config = function()
-			require("plugins.conf.comment")
+			require("raphaelw.plugins.conf.comment")
 		end,
 	},
 	{
@@ -175,7 +175,7 @@ local plugins = {
 		priority = 50,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			require("plugins.conf.lualine")
+			require("raphaelw.plugins.conf.lualine")
 		end,
 	},
 	{
@@ -184,7 +184,7 @@ local plugins = {
 		branch = "v2.x",
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" },
 		config = function()
-			require("plugins.conf.nvim-neo-tree")
+			require("raphaelw.plugins.conf.nvim-neo-tree")
 		end,
 	},
 	{
@@ -198,7 +198,7 @@ local plugins = {
 			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		config = function()
-			require("plugins.conf.telescope")
+			require("raphaelw.plugins.conf.telescope")
 		end,
 	},
 	{
@@ -207,28 +207,28 @@ local plugins = {
 		build = ":TSUpdate",
 		dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
 		config = function()
-			require("plugins.conf.nvim-treesitter")
+			require("raphaelw.plugins.conf.nvim-treesitter")
 		end,
 	},
 	{
 		"Pocco81/true-zen.nvim", -- toggle between modes for zen coding
 		priority = 50,
 		config = function()
-			require("plugins.conf.true-zen")
+			require("raphaelw.plugins.conf.true-zen")
 		end,
 	},
 	{
 		"rafamadriz/friendly-snippets", -- snippets collections for all filetypes
 		priority = 50,
 		config = function()
-			require("plugins.conf.friendly-snippets")
+			require("raphaelw.plugins.conf.friendly-snippets")
 		end,
 	},
 	{
 		"rcarriga/nvim-notify", -- notifications
 		priority = 50,
 		config = function()
-			require("plugins.conf.nvim-notify")
+			require("raphaelw.plugins.conf.nvim-notify")
 		end,
 	},
 	{
@@ -237,28 +237,28 @@ local plugins = {
 		priority = 1000,
 		dependencies = nil,
 		config = function()
-			require("colorscheme.tundra")
+			require("raphaelw.colorscheme.tundra")
 		end,
 	},
 	{
 		"Shatur/neovim-session-manager", -- manage sessions in vscode fashion
 		priority = 50,
 		config = function()
-			require("plugins.conf.neovim-session-manager")
+			require("raphaelw.plugins.conf.neovim-session-manager")
 		end,
 	},
 	{
 		"Tastyep/structlog.nvim", -- more structured login messages
 		priority = 50,
 		config = function()
-			require("plugins.conf.structlog")
+			require("raphaelw.plugins.conf.structlog")
 		end,
 	},
 	{
 		"tpope/vim-fugitive", -- the Lebron James equivalent of vim plugins
 		priority = 50,
 		config = function()
-			require("plugins.conf.vim-fugitive")
+			require("raphaelw.plugins.conf.vim-fugitive")
 		end,
 	},
 	{
@@ -266,7 +266,7 @@ local plugins = {
 		priority = 50,
 		dependencies = nil,
 		config = function()
-			require("plugins.conf.nvim-autopairs")
+			require("raphaelw.plugins.conf.nvim-autopairs")
 		end,
 	},
 	{
@@ -274,14 +274,14 @@ local plugins = {
 		priority = 50,
 		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
 		config = function()
-			require("plugins.conf.mason")
+			require("raphaelw.plugins.conf.mason")
 		end,
 	},
 	{
 		"ziontee113/icon-picker.nvim", -- icon and special character picker
 		priority = 50,
 		config = function()
-			require("plugins.conf.icon-picker")
+			require("raphaelw.plugins.conf.icon-picker")
 		end,
 	},
 

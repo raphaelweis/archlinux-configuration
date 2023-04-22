@@ -4,4 +4,3 @@ require("tokyonight").setup({
 		floats = "light",
 	},
 })
-vim.cmd([[colorscheme tokyonight]])

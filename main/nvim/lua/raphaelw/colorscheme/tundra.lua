@@ -3,4 +3,3 @@ require("nvim-tundra").setup({
 		telescope = true, -- enable telescope custom style
 	},
 })
--- vim.cmd([[colorscheme tundra]])
