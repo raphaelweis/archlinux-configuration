@@ -124,7 +124,7 @@ window#waybar {
 
 #backlight {
   margin: 7px 5px 7px 5px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 11px 0px 8px;
   border-radius: 10000px;
   font-size: 14px;
   background: linear-gradient(to bottom, #ff853c, #ffb48f);
@@ -133,7 +133,7 @@ window#waybar {
 
 #cpu {
   margin: 7px 5px 7px 5px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 15px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
   background: linear-gradient(to bottom, #ffff66, #ffff9e);
@@ -142,7 +142,7 @@ window#waybar {
 
 #memory {
   margin: 7px 5px 7px 5px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 15px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
   background: linear-gradient(to bottom, #5cff5c, #8fff8f);
@@ -160,7 +160,7 @@ window#waybar {
 
 #battery {
   margin: 7px 5px 7px 5px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 12px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
   background: linear-gradient(to bottom, #853cff, #b48fff);
