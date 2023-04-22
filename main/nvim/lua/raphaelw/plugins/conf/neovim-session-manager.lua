@@ -6,3 +6,6 @@ end
 session_manager.setup({
 	autoload_mode = require("session_manager.config").AutoloadMode.Disabled,
 })
+
+-- keymaps
+vim.keymap.set("n", "<C-S>", "<cmd>SessionManager save_current_session<CR>") -- save current session

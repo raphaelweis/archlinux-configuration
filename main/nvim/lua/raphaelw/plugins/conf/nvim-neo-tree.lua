@@ -1,3 +1,4 @@
 -- nvim-neo-tree
 
---vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]]) -- from documentation
+-- keymaps
+vim.keymap.set("n", "<leader>e", "<cmd>NeoTreeFocusToggle<CR>") -- toggle + focus file tree

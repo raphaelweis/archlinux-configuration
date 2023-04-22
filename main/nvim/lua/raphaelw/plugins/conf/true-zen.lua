@@ -13,3 +13,6 @@ true_zen.setup({
 		},
 	},
 })
+
+-- keymaps
+vim.keymap.set("n", "<leader>za", "<cmd>TZAtaraxis<CR>") -- toggle ataraxis zen mode

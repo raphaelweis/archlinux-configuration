@@ -7,3 +7,6 @@ end
 toggleterm.setup({
 	direction = "float",
 })
+
+-- keymaps
+vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<CR>") -- toggle terminal inside neovim (available in normal and terminal mode)

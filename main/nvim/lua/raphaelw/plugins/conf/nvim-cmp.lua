@@ -28,7 +28,14 @@ cmp.setup({ -- load cmp completion
 			require("luasnip").lsp_expand(args.body) -- luasnip as main snippet engine
 		end,
 	},
-	mapping = cmpKeymaps(cmp), -- see function definition in the "keymaps" sections
+	mapping = cmp.mapping.preset.insert({
+		["<TAB>"] = cmp.mapping.select_next_item(), -- next suggestion
+		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion (for consistency)
+		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+		["<C-e>"] = cmp.mapping.abort(), -- close completion window
+		["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+	}),
 	sources = cmp.config.sources({ -- sources for propositions
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
@@ -100,3 +107,5 @@ lspconfig["bashls"].setup({ -- Bash language server
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
+-- keymaps
