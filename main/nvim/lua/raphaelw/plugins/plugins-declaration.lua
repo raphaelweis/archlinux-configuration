@@ -45,31 +45,12 @@ local plugins = {
 		"folke/which-key.nvim", -- pop-up menu that shows possible keybinds after pressing a key
 	},
 	{
-		"glepnir/lspsaga.nvim", -- additional lsp functionnality
-		event = "BufRead",
-		dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter" }, -- /!\ markdown and markdown_inline parsers need to be installed !
-	},
-	{
 		"goolord/alpha-nvim", -- neovim welcome screen
 		dependencies = "nvim-tree/nvim-web-devicons",
 	},
 	{
-		"hrsh7th/nvim-cmp", -- autocompletion
-		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-nvim-lsp",
-			"L3MON4D3/LuaSnip",
-		},
-	},
-	{
 		"iamcco/markdown-preview.nvim", -- to preview markdown documents
 		build = "cd app && npm install",
-	},
-	{
-		"jose-elias-alvarez/null-ls.nvim", -- formatters and linters installation and configuration
-		dependencies = "jay-babu/mason-null-ls.nvim",
 	},
 	{
 		"lervag/vimtex", -- for LaTeX documents
@@ -143,15 +124,33 @@ local plugins = {
 		"Tastyep/structlog.nvim", -- more structured login messages
 	},
 	{
-		"tpope/vim-fugitive", -- the Lebron James equivalent of vim plugins
+		"tpope/vim-fugitive", -- full git integration
+	},
+	{
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		dependencies = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
+
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "rafamadriz/friendly-snippets" },
+		},
 	},
 	{
 		"windwp/nvim-autopairs", -- automatically insert closing brackets, parenthesis, quotes, etc
 		dependencies = nil,
-	},
-	{
-		"williamboman/mason.nvim", -- gui for managing language servers, formatters and linters
-		dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", "jay-babu/mason-null-ls.nvim" },
 	},
 	{
 		"ziontee113/icon-picker.nvim", -- icon and special character picker
