@@ -52,8 +52,9 @@
   },
 
   "network": {
-    "format": "  {essid}",
-    "format-disconnected": "睊 No Internet"
+    "format": "  {essid} | {bandwidthTotalBits}",
+    "format-disconnected": "睊 No Internet",
+    "max-length": 40
   },
 
   "backlight": {
