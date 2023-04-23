@@ -16,6 +16,7 @@
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
+    "network",
     "backlight",
     "cpu",
     "memory",

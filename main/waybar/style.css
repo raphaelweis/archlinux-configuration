@@ -122,12 +122,21 @@ window#waybar {
   color: @font-color-dark;
 }
 
+#network {
+  margin: 7px 5px 7px 5px;
+  padding: 0px 10px 0px 8px;
+  border-radius: 10000px;
+  font-size: 14px;
+  background: linear-gradient(to bottom, #ff853c, #ffb48f);
+  color: @font-color-dark;
+}
+
 #backlight {
   margin: 7px 5px 7px 5px;
   padding: 0px 11px 0px 8px;
   border-radius: 10000px;
   font-size: 14px;
-  background: linear-gradient(to bottom, #ff853c, #ffb48f);
+  background: linear-gradient(to bottom, #ffff66, #ffff9e);
   color: @font-color-dark;
 }
 
@@ -136,7 +145,7 @@ window#waybar {
   padding: 0px 15px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
-  background: linear-gradient(to bottom, #ffff66, #ffff9e);
+  background: linear-gradient(to bottom, #5cff5c, #8fff8f);
   color: @font-color-dark;
 }
 
@@ -145,7 +154,7 @@ window#waybar {
   padding: 0px 15px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
-  background: linear-gradient(to bottom, #5cff5c, #8fff8f);
+  background: linear-gradient(to bottom, #5c5cff, #8f8fff);
   color: @font-color-dark;
 }
 
@@ -154,7 +163,7 @@ window#waybar {
   padding: 0px 10px 0px 10px;
   border-radius: 10000px;
   font-size: 14px;
-  background: linear-gradient(to bottom, #5c5cff, #8f8fff);
+  background: linear-gradient(to bottom, #853cff, #b48fff);
   color: @font-color-dark;
 }
 

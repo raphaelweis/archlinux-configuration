@@ -51,6 +51,11 @@
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
 
+  "network": {
+    "format": "  {essid}",
+    "format-disconnected": "睊 No Internet"
+  },
+
   "backlight": {
     "format": "{icon}",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
