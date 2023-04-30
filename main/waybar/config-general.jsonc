@@ -52,9 +52,12 @@
   },
 
   "network": {
-    "format": "  {essid} | {bandwidthTotalBits}",
+    "format": "  {essid}",
+    "tooltip-format": "Bandwidth total speed: {bandwidthTotalBits}",
     "format-disconnected": "睊 No Internet",
-    "max-length": 40
+    "smooth-scrolling-threshold": 20,
+    "max-length": 30,
+    "interval": 1
   },
 
   "backlight": {
