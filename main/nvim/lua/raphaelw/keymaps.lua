@@ -16,10 +16,10 @@ vim.keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close current split window
 
-vim.keymap.set("n", "<leader>k", "<cmd>wincmd k<CR>") -- move the cursor to the adjacent top window
-vim.keymap.set("n", "<leader>j", "<cmd>wincmd j<CR>") -- move the cursor to the adjacent bottom window
-vim.keymap.set("n", "<leader>h", "<cmd>wincmd h<CR>") -- move the cursor to the adjacent left window
-vim.keymap.set("n", "<leader>l", "<cmd>wincmd l<CR>") -- move the cursor to the adjacent right window
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>") -- move the cursor to the adjacent top window
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>") -- move the cursor to the adjacent bottom window
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>") -- move the cursor to the adjacent left window
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>") -- move the cursor to the adjacent right window
 
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>") -- open new tab
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>") --  go to next tab
