@@ -1,3 +1,4 @@
 .luarc.json
 .zsh_plugins.zsh
 main/zsh/plugins
+main/tmux/plugins

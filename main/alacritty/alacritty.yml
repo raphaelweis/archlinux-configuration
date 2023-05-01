@@ -1,31 +1,31 @@
 colors:
-  # Default colors
-  primary:
-    # background: "#24283b"
-    background: "#000000"
-    foreground: "#c0caf5"
+  # Bright colors
+  bright:
+    black: "#414868"
+    blue: "#7aa2f7"
+    cyan: "#7dcfff"
+    green: "#9ece6a"
+    magenta: "#bb9af7"
+    red: "#f7768e"
+    white: "#c0caf5"
+    yellow: "#e0af68"
 
   # Normal colors
   normal:
     black: "#1d202f"
-    red: "#f7768e"
-    green: "#9ece6a"
-    yellow: "#e0af68"
     blue: "#4d46db"
-    magenta: "#bb9af7"
     cyan: "#7dcfff"
-    white: "#a9b1d6"
-
-  # Bright colors
-  bright:
-    black: "#414868"
-    red: "#f7768e"
     green: "#9ece6a"
-    yellow: "#e0af68"
-    blue: "#7aa2f7"
     magenta: "#bb9af7"
-    cyan: "#7dcfff"
-    white: "#c0caf5"
+    red: "#f7768e"
+    white: "#a9b1d6"
+    yellow: "#e0af68"
+
+  # Default colors
+  primary:
+    background: "#000000"
+    foreground: "#c0caf5"
+
 cursor:
   style:
     blinking: Off
@@ -46,7 +46,7 @@ font:
     style: Medium
   size: 12
 window:
-  padding:
-    x: 10
-    y: 10
   opacity: 0.85
+  padding:
+    x: 5
+    y: 5

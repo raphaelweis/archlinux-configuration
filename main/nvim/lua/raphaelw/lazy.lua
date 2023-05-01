@@ -26,6 +26,9 @@ local plugins = {
 	{
 		"catppuccin/nvim", -- colorscheme plugin
 	},
+  {
+    "christoomey/vim-tmux-navigator" -- vim tmux navigation with CTRL + nav
+  },
 	{
 		"elkowar/yuck.vim", -- syntax highlighting for custom lisp like language - see EWW Widgets on github
 	},
