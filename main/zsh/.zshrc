@@ -16,12 +16,8 @@ fi
 # directory to store the git repositories
 ZSH_PLUGINS_DIR="$ZDOTDIR/plugins"
 
-# zsh theme: powerlevel10k
-if [ ! -d $ZSH_PLUGINS_DIR/powerlevel10k ]; then
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_PLUGINS_DIR/powerlevel10k
-fi
-source $ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme
-source $ZDOTDIR/.p10k.zsh
+# starship prompt
+eval "$(starship init zsh)"
 
 # zsh syntax highlighting
 if [ ! -d $ZSH_PLUGINS_DIR/zsh-syntax-highlighting ]; then
@@ -136,6 +132,17 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
+
+######################################
+# Old
+######################################
+
+# # zsh theme: powerlevel10k
+# if [ ! -d $ZSH_PLUGINS_DIR/powerlevel10k ]; then
+#   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_PLUGINS_DIR/powerlevel10k
+# fi
+# source $ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme
+# source $ZDOTDIR/.p10k.zsh
 
 #######################################
 # Else
