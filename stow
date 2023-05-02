@@ -33,15 +33,15 @@ else
 fi
 
 # stow main second
-stow -R main -t ~/.config
+stow main -t ~/.config
 
 # stow scripts third
-stow -R scripts -t ~/.local/bin
+stow scripts -t ~/.local/bin
 
 # stow wallpapers fourth
-stow -R wallpapers -t ~/Pictures/wallpapers
+stow wallpapers -t ~/Pictures/wallpapers
 
 # stow special packages
-stow -R -d ./special wrappedhl -t ~/.local/bin
-stow -R -d ./special zshenv -t ~/
-stow -R -d ./special bash -t ~/
+stow -d ./special wrappedhl -t ~/.local/bin
+stow -d ./special zshenv -t ~/
+stow -d ./special bash -t ~/

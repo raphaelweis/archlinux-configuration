@@ -1,6 +1,6 @@
 {
   "include": "$XDG_CONFIG_HOME/waybar/config-general.jsonc",
-  "output": "eDP-1",
+  "output": "DP-3",
   "layer": "top",
   "position": "top",
   "height": 40,
@@ -8,7 +8,7 @@
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "modules-left": ["custom/logo", "mpris", "custom/recording"],
+  "modules-left": ["custom/logo", "mpris", "keyboard-state", "custom/recording"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "pulseaudio",
@@ -17,7 +17,6 @@
     "cpu",
     "memory",
     "temperature",
-    "keyboard-state",
     "clock"
   ],
   "wlr/workspaces": {
@@ -37,6 +36,11 @@
       "7": [],
       "8": [],
       "9": []
+    },
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
     }
   }
 }
