@@ -52,8 +52,9 @@
   },
 
   "network": {
-    "format": "  {essid}",
-    "tooltip-format": "Bandwidth total speed: {bandwidthTotalBits}",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "Ethernet",
+    "tooltip-format": "Bandwidth total speed: {bandwidthDownBits}",
     "format-disconnected": "No Internet",
     "smooth-scrolling-threshold": 20,
     "max-length": 30,
