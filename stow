@@ -44,3 +44,4 @@ stow -R wallpapers -t ~/Pictures/wallpapers
 # stow special packages
 stow -R -d ./special wrappedhl -t ~/.local/bin
 stow -R -d ./special zshenv -t ~/
+stow -R -d ./special bash -t ~/

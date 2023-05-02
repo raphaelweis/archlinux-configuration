@@ -1,2 +1,27 @@
+# general format
+format = '$shell$all'
+
 # don't print a new line at the start of the prompt
 add_newline = false
+
+# prompt character
+[character]     
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[shell]
+zsh_indicator = '\[Z\]'
+bash_indicator = '\[\$\]'
+powershell_indicator = '\[_\]'
+unknown_indicator = '\[?\]'
+style = 'bold yellow'
+disabled = false
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 100
+style = 'bold red'
