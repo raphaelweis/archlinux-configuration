@@ -71,19 +71,23 @@ bindkey '^[[B' history-substring-search-down
 # Aliases 
 #######################################
 
-#use lsd as a replacement for la
-alias ls='lsd'
-alias la='lsd -la'
-
 alias vim='nvim'
-alias gc='git checkout' # for faster git navigation
 alias bonjour='cowsay bonjour' # absolutely capital
 alias bt='bluetuith' # bluetooth tui
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash && zsh'
 
+# git aliases
+alias gitc='git checkout'
+alias gits='git status'
+
+# use lsd as a replacement for la
+alias ls='lsd'
+alias la='lsd -la'
+
 # use zoxide as a replacement for cd.
 alias cd='z'
 
+# directory up aliases
 alias .2='../..'
 alias .3='../../..'
 alias .4='../../../..'

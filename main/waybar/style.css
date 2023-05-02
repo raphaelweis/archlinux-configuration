@@ -71,7 +71,7 @@ window#waybar {
   margin: 7px 5px 7px 1px;
   padding: 0px 8px 0px 8px;
   border-radius: 10000px;
-  font-size: 19px;
+  font-size: 15px;
   background: @background-color;
   color: #ff0000;
 }

@@ -6,7 +6,7 @@ echo "$$" > "/tmp/record-widget.pid"
 
 update() {
   if [ "$recordings" -gt 0 ]; then
-    echo "雷"
+    echo ""
   else
     echo ""
   fi
