@@ -1,8 +1,9 @@
 local function setColorScheme()
-  vim.cmd([[colorscheme rose-pine]])
+  vim.o.background = "dark"
+  vim.cmd([[colorscheme gruvbox]])
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
-  callback = setColorScheme,
+  callback = setColorScheme(),
 })

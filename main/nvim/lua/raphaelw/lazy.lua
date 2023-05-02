@@ -25,6 +25,7 @@ local plugins = {
 	},
 	{
 		"catppuccin/nvim", -- colorscheme plugin
+    priority = 1000,
 	},
   {
     "christoomey/vim-tmux-navigator" -- vim tmux navigation with CTRL + nav
@@ -34,12 +35,14 @@ local plugins = {
 	},
 	{
 		"ellisonleao/gruvbox.nvim", -- colorscheme plugin
+    priority = 1000,
 	},
 	{
 		"folke/neodev.nvim", -- completion and documentation for lua neovim config and API's
 	},
 	{
 		"folke/tokyonight.nvim", -- colorscheme plugin
+    priority = 1000,
 	},
 	{
 		"folke/which-key.nvim", -- pop-up menu that shows possible keybinds after pressing a key
@@ -63,6 +66,7 @@ local plugins = {
 	},
 	{
 		"lunarvim/Onedarker.nvim", -- colorscheme plugin
+    priority = 1000,
 	},
 	{
 		"mfussenegger/nvim-dap", -- nvim DAP - debug adapter protocol
@@ -103,18 +107,19 @@ local plugins = {
 	{
 		"rcarriga/nvim-notify", -- notifications
 	},
-	{
-		"rose-pine/neovim",
-	},
+  {
+	  "rose-pine/neovim"
+  },
 	{
 		"sam4llis/nvim-tundra", -- colorscheme plugin
+    priority = 1000,
 	},
 	{
 		"Shatur/neovim-session-manager", -- manage sessions in vscode fashion
 	},
-	{
-		"Tastyep/structlog.nvim", -- more structured login messages
-	},
+  {
+    "Tastyep/structlog.nvim", -- more structured login messages
+  },
 	{
 		"tpope/vim-fugitive", -- full git integration
 	},
@@ -125,15 +130,15 @@ local plugins = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
 			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
+      { "williamboman/mason-lspconfig.nvim" },
 
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
+      -- Autocompletion
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
 
 			-- Snippets
 			{ "L3MON4D3/LuaSnip" },

@@ -39,7 +39,6 @@ lsp.ensure_installed({
   "pyright",
   "rust_analyzer",
   "sqlls",
-  "yamlls",
 })
 
 -- (Optional) Configure lua language server for neovim
