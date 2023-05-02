@@ -54,7 +54,7 @@
   "network": {
     "format": "  {essid}",
     "tooltip-format": "Bandwidth total speed: {bandwidthTotalBits}",
-    "format-disconnected": "睊 No Internet",
+    "format-disconnected": "No Internet",
     "smooth-scrolling-threshold": 20,
     "max-length": 30,
     "interval": 1
