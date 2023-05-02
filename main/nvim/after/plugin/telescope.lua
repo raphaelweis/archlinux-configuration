@@ -17,6 +17,11 @@ telescope.setup({
 			prompt_position = "top",
 		},
 	},
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_cursor({})
+    }
+  }
 })
 
 telescope.load_extension("fzf") -- load fzf extension
