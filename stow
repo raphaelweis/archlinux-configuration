@@ -2,17 +2,25 @@
 
 # check if required directories exist if not create them
 
+DOCUMENTS_DIR="$HOME/Documents/"
+LOCAL_BIN_DIR="$HOME/.local/bin"
 WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
+WALL_DEFAULT_DIR="$WALLPAPERS_DIR/default/"
 SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 RECORDINGS_DIR="$HOME/Pictures/recordings"
 
+if [ ! -d "$DOCUMENTS_DIR" ]; then
+    mkdir -p "$DOCUMENTS_DIR"
+fi
+if [ ! -d "$LOCAL_BIN_DIR" ]; then
+    mkdir -p "$LOCAL_BIN_DIR"
+fi
 if [ ! -d "$WALLPAPERS_DIR" ]; then
     mkdir -p "$WALLPAPERS_DIR"
 fi
-if [ ! -d "$WALLPAPERS_DIR/default" ]; then
-    mkdir -p "$WALLPAPERS_DIR/default"
+if [ ! -d "$WALL_DEFAULT_DIR" ]; then
+    mkdir -p "$WALL_DEFAULT_DIR"
 fi
-
 if [ ! -d "$SCREENSHOTS_DIR" ]; then
     mkdir -p "$SCREENSHOTS_DIR"
 fi
