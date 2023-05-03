@@ -145,6 +145,9 @@ local plugins = {
 			{ "rafamadriz/friendly-snippets" },
 		},
 	},
+  {
+    "waycrate/swhkd-vim", -- for syntax highlighting in swhkd hotkey daemon conf file
+  },
 	{
 		"windwp/nvim-autopairs", -- automatically insert closing brackets, parenthesis, quotes, etc
 	},
