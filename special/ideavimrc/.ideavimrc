@@ -1,2 +1,5 @@
-imap jk <Esc>
+" Options
 set nooldundo
+
+" Keymaps
+imap jk <Esc>
