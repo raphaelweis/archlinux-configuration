@@ -54,3 +54,4 @@ stow -d ./special wrappedhl -t ~/.local/bin
 stow -d ./special zshenv -t ~/
 stow -d ./special bash -t ~/
 stow -d ./special vim -t ~/
+stow -d ./special ideavimrc -t ~/
