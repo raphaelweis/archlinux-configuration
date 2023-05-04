@@ -7,3 +7,5 @@
 	rebase = false
 [core]
 	editor = nvim
+[safe]
+	directory = /opt/flutter
