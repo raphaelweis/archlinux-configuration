@@ -24,11 +24,11 @@ set commentary
 set nerdtree
 
 " Keymaps
-let mapleader=" "
-imap jk <Esc>
-
 nnoremap \o :e ~/.ideavimrc<CR>
 nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+let mapleader=" "
+imap jk <Esc>
 
 nnoremap <leader>za :action ToggleDistractionFreeMode<CR>
 
@@ -36,6 +36,7 @@ nnoremap <leader>sv :action SplitVertically<CR>
 nnoremap <leader>sh :action SplitHorizontally<CR>
 noremap <leader>sx :action CloseActiveTab<CR>
 nnoremap <leader>sm :action HideAllWindows<CR>
+nnoremap <leader>xx :action CloseAllEditors<CR>
 
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
@@ -48,6 +49,7 @@ nnoremap <leader>bn :action NextTab<CR>
 map <leader>ff :action SearchEverywhere<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>ca :action ShowIntentionActions<CR>
 
 nnoremap <leader>gb :action Git.Branches<CR>
 nnoremap <leader>ga :action Git.Add<CR>
