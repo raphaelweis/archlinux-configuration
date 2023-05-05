@@ -5,6 +5,9 @@ sethandler <c-j> a:vim
 sethandler <c-k> a:vim
 sethandler <c-l> a:vim
 sethandler <c-h> a:vim
+sethandler <c-s> a:vim
+sethandler <c-w> a:vim
+sethandler <c-e> a:vim
 
 " Options
 set nooldundo
@@ -12,8 +15,13 @@ set nooldundo
 set relativenumber
 set number
 
+set visualbell
+
 set clipboard+=unnamed
 set clipboard+=ideaput
+
+set commentary
+set nerdtree
 
 " Keymaps
 let mapleader=" "
@@ -26,7 +34,8 @@ nnoremap <leader>za :action ToggleDistractionFreeMode<CR>
 
 nnoremap <leader>sv :action SplitVertically<CR>
 nnoremap <leader>sh :action SplitHorizontally<CR>
-nnoremap <leader>sx :action Unsplit<CR>
+noremap <leader>sx :action CloseActiveTab<CR>
+nnoremap <leader>sm :action HideAllWindows<CR>
 
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
@@ -36,4 +45,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <leader>bp :action PreviousTab<CR>
 nnoremap <leader>bn :action NextTab<CR>
 
+nnoremap <leader>ff :action SearchEverywhere<CR>
+
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>gb :action Git.Branches<CR>
+nnoremap <leader>ga :action Git.Add<CR>
+nnoremap <leader>gm :action Git.Menu<CR>
+
+map <leader>e :NERDTreeToggle<CR>
