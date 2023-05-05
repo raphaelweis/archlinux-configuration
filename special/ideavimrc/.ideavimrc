@@ -45,7 +45,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <leader>bp :action PreviousTab<CR>
 nnoremap <leader>bn :action NextTab<CR>
 
-nnoremap <leader>ff :action SearchEverywhere<CR>
+map <leader>ff :action SearchEverywhere<CR>
 
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
 
