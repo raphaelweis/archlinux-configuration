@@ -1,5 +1,9 @@
 #!/bin/bash
 
 # stow global stow packages, that require root privileges to run
-cp -i ./special/wrappedhl_desktop/wrappedhl.desktop /usr/share/wayland-sessions
+\cp -f ./special/wrappedhl_desktop/wrappedhl.desktop /usr/share/wayland-sessions
 stow -R -d ./special httpd_conf -t /opt/lampp/etc/
+
+# sddm configuration file and theme
+\cp -rf ./special/sddm/sddm.conf.d /etc/
+\cp -rf ./special/sddm/archlinux-soft-grey /usr/share/sddm/themes/
