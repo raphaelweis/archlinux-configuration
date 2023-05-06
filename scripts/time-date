@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DATETIME=`date "+%H:%M - %d/%m/%Y"`
+notify-send "Current time:" "$DATETIME" -i "$XDG_CONFIG_HOME/dunst/icons/clock-icon-white.png"
