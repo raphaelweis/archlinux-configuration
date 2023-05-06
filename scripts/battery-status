@@ -1,0 +1,4 @@
+#!/bin/bash
+
+BATINFO=`acpi -b | grep "Battery 0" | grep -P -o '[0-9]+(?=%)'`
+notify-send "Battery level:" "${BATINFO}%" -i "$XDG_CONFIG_HOME/dunst/icons/battery-icon-orange.png"
