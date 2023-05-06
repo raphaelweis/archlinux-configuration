@@ -30,8 +30,6 @@ nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 let mapleader=" "
 imap jk <Esc>
 
-nnoremap <leader>za :action ToggleDistractionFreeMode<CR>
-
 nnoremap <leader>sv :action SplitVertically<CR>
 nnoremap <leader>sh :action SplitHorizontally<CR>
 noremap <leader>sx :action CloseActiveTab<CR>

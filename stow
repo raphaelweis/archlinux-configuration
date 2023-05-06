@@ -30,6 +30,7 @@ if [ ! -d "$RECORDINGS_DIR" ]; then
 fi
 
 # stow hosts first
+rm ~/.config/mimeapps.list
 if [ "$(hostname)" = "archlinux-desktop" ]; then
   # stow package for desktop
   stow -R desktop -t ~/.config/

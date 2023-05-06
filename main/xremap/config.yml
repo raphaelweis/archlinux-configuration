@@ -1,0 +1,7 @@
+keymap:
+  - name: Global
+    remap:
+      ALT-h: left
+      ALT-l: right
+      ALT-k: up
+      ALT-j: down
