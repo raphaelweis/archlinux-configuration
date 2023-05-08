@@ -10,3 +10,5 @@ set clipboard+=unnamed
 set clipboard+=ideaput
 
 set commentary
+
+imap jk <Esc>
