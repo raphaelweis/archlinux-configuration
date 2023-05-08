@@ -12,3 +12,9 @@ set clipboard+=ideaput
 set commentary
 
 imap jk <Esc>
+
+let mapleader=" "
+
+nnoremap <space>bn :bn<CR>
+nnoremap <space>bp :bp<CR>
+nnoremap <space>bd :bd<CR>
