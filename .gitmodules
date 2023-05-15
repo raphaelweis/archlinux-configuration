@@ -7,3 +7,6 @@
 [submodule "main/starship"]
 	path = main/starship
 	url = https://github.com/raphaelweis/starship.git
+[submodule "main/zsh"]
+	path = main/zsh
+	url = https://github.com/raphaelweis/zsh.git
