@@ -10,3 +10,9 @@
 [submodule "main/powershell"]
 	path = main/powershell
 	url = https://github.com/raphaelweis/powershell.git
+[submodule "main/zsh"]
+	path = main/zsh
+	url = https://github.com/raphaelweis/zsh.git
+[submodule "main/tmux"]
+	path = main/tmux
+	url = https://github.com/raphaelweis/tmux.git
