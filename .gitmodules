@@ -13,3 +13,6 @@
 [submodule "main/git"]
 	path = main/git
 	url = https://github.com/raphaelweis/git.git
+[submodule "main/powershell"]
+	path = main/powershell
+	url = https://github.com/raphaelweis/powershell.git
