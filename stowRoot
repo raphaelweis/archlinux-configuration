@@ -7,3 +7,4 @@ stow -R -d ./special httpd_conf -t /opt/lampp/etc/
 # sddm configuration file and theme
 \cp -rf ./special/sddm/sddm.conf.d /etc/
 \cp -rf ./special/sddm/archlinux-soft-grey /usr/share/sddm/themes/
+\cp -rf ./special/sddm/sugar-light /usr/share/sddm/themes/
