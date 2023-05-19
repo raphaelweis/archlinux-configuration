@@ -19,7 +19,7 @@ do
     git --git-dir=$dir/.git --work-tree=$dir push &> /dev/null
   fi
 done
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add . &> /dev/null
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add "$PARENT_DIR/." &> /dev/null
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR commit -m "Updated link scripts" &> /dev/null
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
