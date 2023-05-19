@@ -55,3 +55,24 @@
 [submodule "scripts"]
 	path = scripts
 	url = https://github.com/raphaelweis/scripts.git
+[submodule "apache"]
+	path = apache
+	url = https://github.com/raphaelweis/apache.git
+[submodule "bash"]
+	path = bash
+	url = https://github.com/raphaelweis/bash.git
+[submodule "ideavimrc"]
+	path = ideavimrc
+	url = https://github.com/raphaelweis/ideavimrc.git
+[submodule "sddm.conf.d"]
+	path = sddm.conf.d
+	url = https://github.com/raphaelweis/sddm.conf.d.git
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/raphaelweis/vimrc.git
+[submodule "wayland-sessions"]
+	path = wayland-sessions
+	url = https://github.com/raphaelweis/wayland-sessions.git
+[submodule "zshenv"]
+	path = zshenv
+	url = https://github.com/raphaelweis/zshenv.git
