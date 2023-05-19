@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# options
+updateLink() {
+for dir in $PARENT_DIR/*/ # trailing / character to only include directories
+do
+  dir=${dir%*/} # remove trailing / character
+  if [ $dir != "$PARENT_DIR/_" ]; then # exclude config "_" directory
+    \cp -f "$SCRIPT_DIR/link" $dir
+    if [ $? -eq 0 ]; then
+      echo "Updated link script in $dir"
+    else
+      echo "Error: The link script update failed for $dir"
+      exit
+    fi
+    git --work-tree=$dir add . &> /dev/null
+    git --work-tree=$dir commit -m "Updated link script" &> /dev/null
+    git --work-tree=$dir push &> /dev/null
+  fi
+done
+}
+
+# get the path to the script and the main directory (above the script)
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+PARENT_DIR=$(dirname "$SCRIPT_DIR")
+
+# read the options
+while getopts ":l" option; do
+  case $option in
+    l) # update link scripts in all directories
+      updateLink
+      exit 0;;
+    \?) # invalid option
+      echo "Error: Invalid option"
+      exit 1;;
+  esac
+done
