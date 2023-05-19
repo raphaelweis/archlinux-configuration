@@ -19,6 +19,7 @@ $PARENT_DIR/pipewire/link -c default
 $PARENT_DIR/powershell/link -c default
 $PARENT_DIR/rofi/link -c default
 $PARENT_DIR/scripts/link -c file
+$PARENT_DIR/sddm-themes/link -c sudo
 $PARENT_DIR/sddm.conf.d/link -c sudo
 $PARENT_DIR/starship/link -c default
 $PARENT_DIR/swaylock/link -c default

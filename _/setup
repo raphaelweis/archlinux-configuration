@@ -39,7 +39,9 @@ updateLink() {
 useLinkerScripts() {
   export XDG_CONFIG_HOME=$HOME/.config
   export XDG_DATA_HOME=$HOME/.local
-  if [ $host = "desktop" ]; then
+
+  case $host in
+    "desktop" | "laptop" ) # check for configured hosts
     ./configurations $PARENT_DIR $host
     if [ $? -eq 0 ]; then
       echo
@@ -47,14 +49,11 @@ useLinkerScripts() {
     else
       echo "Error: Could not link some packages. Maybe check environment variables ?"
     fi
-    exit 0
-  elif [ $host = "laptop" ]; then
-    echo "host is $host";
-    exit 0
-  else
-    echo "Error: No configured host was provided"
-    exit 1
-  fi
+    exit 0;;
+    *) # error out if argument did not match any know hosts
+      echo "Error: No configured host was provided"
+      exit 1;;
+  esac
 }
 
 # get the path to the script and the main directory (above the script)
