@@ -16,3 +16,33 @@
 [submodule "main/tmux"]
 	path = main/tmux
 	url = https://github.com/raphaelweis/tmux.git
+[submodule "main/alacritty"]
+	path = main/alacritty
+	url = https://github.com/raphaelweis/alacritty.git
+[submodule "main/dunst"]
+	path = main/dunst
+	url = https://github.com/raphaelweis/dunst.git
+[submodule "main/eww"]
+	path = main/eww
+	url = https://github.com/raphaelweis/eww.git
+[submodule "main/fish"]
+	path = main/fish
+	url = https://github.com/raphaelweis/fish.git
+[submodule "main/gtk-3.0"]
+	path = main/gtk-3.0
+	url = https://github.com/raphaelweis/gtk-3.0.git
+[submodule "main/kitty"]
+	path = main/kitty
+	url = https://github.com/raphaelweis/kitty.git
+[submodule "main/pipewire"]
+	path = main/pipewire
+	url = https://github.com/raphaelweis/pipewire.git
+[submodule "main/rofi"]
+	path = main/rofi
+	url = https://github.com/raphaelweis/rofi.git
+[submodule "main/swaylock"]
+	path = main/swaylock
+	url = https://github.com/raphaelweis/swaylock.git
+[submodule "main/xremap"]
+	path = main/xremap
+	url = https://github.com/raphaelweis/xremap.git
