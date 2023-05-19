@@ -10,23 +10,22 @@ SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 RECORDINGS_DIR="$HOME/Pictures/recordings"
 
 if [ ! -d "$DOCUMENTS_DIR" ]; then
-    mkdir -p "$DOCUMENTS_DIR"
+  mkdir -p "$DOCUMENTS_DIR"
 fi
 if [ ! -d "$LOCAL_BIN_DIR" ]; then
-    mkdir -p "$LOCAL_BIN_DIR"
+  mkdir -p "$LOCAL_BIN_DIR"
 fi
 if [ ! -d "$WALLPAPERS_DIR" ]; then
-    mkdir -p "$WALLPAPERS_DIR"
+  mkdir -p "$WALLPAPERS_DIR"
 fi
 if [ ! -d "$WALL_DEFAULT_DIR" ]; then
-    mkdir -p "$WALL_DEFAULT_DIR"
+  mkdir -p "$WALL_DEFAULT_DIR"
 fi
 if [ ! -d "$SCREENSHOTS_DIR" ]; then
-    mkdir -p "$SCREENSHOTS_DIR"
+  mkdir -p "$SCREENSHOTS_DIR"
 fi
-
 if [ ! -d "$RECORDINGS_DIR" ]; then
-    mkdir -p "$RECORDINGS_DIR"
+  mkdir -p "$RECORDINGS_DIR"
 fi
 
 # stow hosts first
