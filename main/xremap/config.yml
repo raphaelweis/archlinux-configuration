@@ -1,7 +1,0 @@
-keymap:
-  - name: Global
-    remap:
-      ALT-SHIFT-h: left
-      ALT-SHIFT-l: right
-      ALT-SHIFT-k: up
-      ALT-SHIFT-j: down
