@@ -2,6 +2,7 @@
 
 # options
 updateLink() {
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --init
 for dir in $PARENT_DIR/*/ # trailing / character to only include directories
 do
   dir=${dir%*/} # remove trailing / character
@@ -18,6 +19,10 @@ do
     git --git-dir=$dir/.git --work-tree=$dir push &> /dev/null
   fi
 done
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add . &> /dev/null
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR commit -m "Updated link scripts" &> /dev/null
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
+git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
 }
 
 # get the path to the script and the main directory (above the script)
