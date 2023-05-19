@@ -12,38 +12,47 @@ showHelp() {
 }
 
 updateLink() {
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --init
-for dir in $PARENT_DIR/*/ # trailing / character to only include directories
-do
-  dir=${dir%*/} # remove trailing / character
-  if [ $dir != "$PARENT_DIR/_" ]; then # exclude config "_" directory
-    \cp -f "$SCRIPT_DIR/link" $dir
-    if [ $? -eq 0 ]; then
-      echo "Updated link script in $dir"
-    else
-      echo "Error: The link script update failed for $dir"
-      exit
+  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --init
+  for dir in $PARENT_DIR/*/ # trailing / character to only include directories
+  do
+    dir=${dir%*/} # remove trailing / character
+    if [ $dir != "$PARENT_DIR/_" ]; then # exclude config "_" directory
+      \cp -f "$SCRIPT_DIR/link" $dir
+      if [ $? -eq 0 ]; then
+        echo "Updated link script in $dir"
+      else
+        echo "Error: The link script update failed for $dir"
+        exit
+      fi
+      git --git-dir=$dir/.git --work-tree=$dir add . &> /dev/null
+      git --git-dir=$dir/.git --work-tree=$dir commit -m "Updated link script" &> /dev/null
+      git --git-dir=$dir/.git --work-tree=$dir push origin HEAD:main &> /dev/null
     fi
-    git --git-dir=$dir/.git --work-tree=$dir add . &> /dev/null
-    git --git-dir=$dir/.git --work-tree=$dir commit -m "Updated link script" &> /dev/null
-    git --git-dir=$dir/.git --work-tree=$dir push origin HEAD:main &> /dev/null
-  fi
-done
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add "$PARENT_DIR/." &> /dev/null
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR commit -m "Updated link scripts" &> /dev/null
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
-git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
+  done
+  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add "$PARENT_DIR/." &> /dev/null
+  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR commit -m "Updated link scripts" &> /dev/null
+  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
+  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
+  exit 0
 }
 
 useLinkerScripts() {
+  export XDG_CONFIG_HOME=$HOME/.config
+  export XDG_DATA_HOME=$HOME/.local
   if [ $host = "desktop" ]; then
-    echo "host is $host"
+    ./configurations $PARENT_DIR $host
+    if [ $? -eq 0 ]; then
+      echo
+      echo "Linked all packages successfully"
+    else
+      echo "Error: Could not link some packages. Maybe check environment variables ?"
+    fi
     exit 0
-  elif [$host = "laptop" ]; then
+  elif [ $host = "laptop" ]; then
     echo "host is $host";
     exit 0
   else
-    echo "Error: No host was provided"
+    echo "Error: No configured host was provided"
     exit 1
   fi
 }
@@ -65,7 +74,7 @@ while getopts ":h:c:l" option; do
       updateLink
       exit 0;;
     c) # choose configuration
-      $host=$OPTARG;;
+      host=$OPTARG;;
     \?) # invalid option
       echo "Error: Invalid option"
       exit 1;;

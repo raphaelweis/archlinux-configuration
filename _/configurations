@@ -1,0 +1,31 @@
+#!/bin/bash
+
+PARENT_DIR=$1
+host=$2
+
+$PARENT_DIR/alacritty/link -c default
+$PARENT_DIR/apache/link -c sudo
+$PARENT_DIR/bash/link -c file
+$PARENT_DIR/dunst/link -c default
+$PARENT_DIR/eww/link -c default
+$PARENT_DIR/fish/link -c default
+$PARENT_DIR/git/link -c default
+$PARENT_DIR/gtk-3.0/link -c default
+$PARENT_DIR/hypr/link -c $host
+$PARENT_DIR/ideavimrc/link -c file
+$PARENT_DIR/kitty/link -c default
+$PARENT_DIR/nvim/link -c default
+$PARENT_DIR/pipewire/link -c default
+$PARENT_DIR/powershell/link -c default
+$PARENT_DIR/rofi/link -c default
+$PARENT_DIR/scripts/link -c file
+$PARENT_DIR/sddm.conf.d/link -c sudo
+$PARENT_DIR/starship/link -c default
+$PARENT_DIR/swaylock/link -c default
+$PARENT_DIR/tmux/link -c default
+$PARENT_DIR/vimrc/link -c file
+$PARENT_DIR/waybar/link -c $host
+$PARENT_DIR/wayland-sessions/link -c sudo
+$PARENT_DIR/xremap/link -c default
+$PARENT_DIR/zsh/link -c default
+$PARENT_DIR/zshenv/link -c file
