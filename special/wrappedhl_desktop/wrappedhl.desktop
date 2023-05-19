@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=WrappedHl
-Comment=An intelligent dynamic tiling Wayland compositor (wrapped)
-Exec=/home/raphaelw/.local/bin/wrappedhl
-Type=Application
