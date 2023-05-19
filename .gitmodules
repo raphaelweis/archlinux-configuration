@@ -52,3 +52,6 @@
 [submodule "waybar"]
 	path = waybar
 	url = https://github.com/raphaelweis/waybar.git
+[submodule "scripts"]
+	path = scripts
+	url = https://github.com/raphaelweis/scripts.git
