@@ -46,6 +46,6 @@
 [submodule "main/xremap"]
 	path = main/xremap
 	url = https://github.com/raphaelweis/xremap.git
-[submodule "hypr"]
-	path = hypr
+[submodule "main/hypr"]
+	path = main/hypr
 	url = https://github.com/raphaelweis/hypr.git
