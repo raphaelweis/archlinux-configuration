@@ -26,7 +26,7 @@ do
     fi
     git --git-dir=$dir/.git --work-tree=$dir add . &> /dev/null
     git --git-dir=$dir/.git --work-tree=$dir commit -m "Updated link script" &> /dev/null
-    git --git-dir=$dir/.git --work-tree=$dir push &> /dev/null
+    git --git-dir=$dir/.git --work-tree=$dir push origin HEAD:main &> /dev/null
   fi
 done
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add "$PARENT_DIR/." &> /dev/null
