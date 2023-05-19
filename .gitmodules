@@ -76,6 +76,3 @@
 [submodule "zshenv"]
 	path = zshenv
 	url = https://github.com/raphaelweis/zshenv.git
-[submodule "sddm-themes"]
-	path = sddm-themes
-	url = https://github.com/raphaelweis/sddm-themes.git
