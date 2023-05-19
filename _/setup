@@ -56,7 +56,7 @@ PARENT_DIR=$(dirname "$SCRIPT_DIR")
 host=""
 
 # read the options
-while getopts ":h:l:c:" option; do
+while getopts ":h:c:l" option; do
   case $option in
     h) # display help
       showHelp
