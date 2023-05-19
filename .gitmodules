@@ -1,51 +1,54 @@
-[submodule "main/nvim"]
-	path = main/nvim
+[submodule "nvim"]
+	path = nvim
 	url = https://github.com/raphaelweis/nvim.git
-[submodule "main/starship"]
-	path = main/starship
+[submodule "starship"]
+	path = starship
 	url = https://github.com/raphaelweis/starship.git
-[submodule "main/git"]
-	path = main/git
+[submodule "git"]
+	path = git
 	url = https://github.com/raphaelweis/git.git
-[submodule "main/powershell"]
-	path = main/powershell
+[submodule "powershell"]
+	path = powershell
 	url = https://github.com/raphaelweis/powershell.git
-[submodule "main/zsh"]
-	path = main/zsh
+[submodule "zsh"]
+	path = zsh
 	url = https://github.com/raphaelweis/zsh.git
-[submodule "main/tmux"]
-	path = main/tmux
+[submodule "tmux"]
+	path = tmux
 	url = https://github.com/raphaelweis/tmux.git
-[submodule "main/alacritty"]
-	path = main/alacritty
+[submodule "alacritty"]
+	path = alacritty
 	url = https://github.com/raphaelweis/alacritty.git
-[submodule "main/dunst"]
-	path = main/dunst
+[submodule "dunst"]
+	path = dunst
 	url = https://github.com/raphaelweis/dunst.git
-[submodule "main/eww"]
-	path = main/eww
+[submodule "eww"]
+	path = eww
 	url = https://github.com/raphaelweis/eww.git
-[submodule "main/fish"]
-	path = main/fish
+[submodule "fish"]
+	path = fish
 	url = https://github.com/raphaelweis/fish.git
-[submodule "main/gtk-3.0"]
-	path = main/gtk-3.0
+[submodule "gtk-3.0"]
+	path = gtk-3.0
 	url = https://github.com/raphaelweis/gtk-3.0.git
-[submodule "main/kitty"]
-	path = main/kitty
+[submodule "kitty"]
+	path = kitty
 	url = https://github.com/raphaelweis/kitty.git
-[submodule "main/pipewire"]
-	path = main/pipewire
+[submodule "pipewire"]
+	path = pipewire
 	url = https://github.com/raphaelweis/pipewire.git
-[submodule "main/rofi"]
-	path = main/rofi
+[submodule "rofi"]
+	path = rofi
 	url = https://github.com/raphaelweis/rofi.git
-[submodule "main/swaylock"]
-	path = main/swaylock
+[submodule "swaylock"]
+	path = swaylock
 	url = https://github.com/raphaelweis/swaylock.git
-[submodule "main/xremap"]
-	path = main/xremap
+[submodule "xremap"]
+	path = xremap
 	url = https://github.com/raphaelweis/xremap.git
-[submodule "main/hypr"]
-	path = main/hypr
+[submodule "hypr"]
+	path = hypr
 	url = https://github.com/raphaelweis/hypr.git
+[submodule "waybar"]
+	path = waybar
+	url = https://github.com/raphaelweis/waybar.git
