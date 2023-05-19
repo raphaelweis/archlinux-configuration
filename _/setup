@@ -1,6 +1,16 @@
 #!/bin/bash
 
 # options
+showHelp() {
+  echo "This script is a full blown setup manager for archlinux"
+  echo
+  echo "Syntax: setup [options][arguments]"
+  echo "options:"
+  echo "-h    Show this help message"
+  echo "-l    update the linker script on every submodule (can be dangerous)"
+  echo "-c    Choose a specific host configuration (ex: laptop, desktop...) to link all packages"
+}
+
 updateLink() {
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --init
 for dir in $PARENT_DIR/*/ # trailing / character to only include directories
@@ -25,18 +35,48 @@ git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
 git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
 }
 
+useLinkerScripts() {
+  if [ $host = "desktop" ]; then
+    echo "host is $host"
+    exit 0
+  elif [$host = "laptop" ]; then
+    echo "host is $host";
+    exit 0
+  else
+    echo "Error: No host was provided"
+    exit 1
+  fi
+}
+
 # get the path to the script and the main directory (above the script)
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 PARENT_DIR=$(dirname "$SCRIPT_DIR")
 
+# set variables
+host=""
+
 # read the options
-while getopts ":l" option; do
+while getopts ":h:l:c:" option; do
   case $option in
+    h) # display help
+      showHelp
+      exit 0;;
     l) # update link scripts in all directories
       updateLink
       exit 0;;
+    c) # choose configuration
+      $host=$OPTARG;;
     \?) # invalid option
       echo "Error: Invalid option"
       exit 1;;
   esac
 done
+
+# set host
+if [ -n "$host" ]; then
+  useLinkerScripts
+fi
+
+# show help if no options have been passed in
+showHelp
+exit 1;
