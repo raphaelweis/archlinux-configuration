@@ -9,10 +9,11 @@ showHelp() {
   echo "-h    Show this help message"
   echo "-l    update the linker script on every submodule (can be dangerous)"
   echo "-c    Choose a specific host configuration (ex: laptop, desktop...) to link all packages"
+  echo "-n    Create a new submodule interactively, automatically make the necessary commits"
 }
 
 updateLink() {
-  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --init
+  git -C "$PARENT_DIR" submodule update --init
   for dir in $PARENT_DIR/*/ # trailing / character to only include directories
   do
     dir=${dir%*/} # remove trailing / character
@@ -24,36 +25,107 @@ updateLink() {
         echo "Error: The link script update failed for $dir"
         exit
       fi
-      git --git-dir=$dir/.git --work-tree=$dir add . &> /dev/null
-      git --git-dir=$dir/.git --work-tree=$dir commit -m "Updated link script" &> /dev/null
-      git --git-dir=$dir/.git --work-tree=$dir push origin HEAD:main &> /dev/null
+      git -C "$dir" add . &> /dev/null
+      git -C "$dir" commit -m "Updated link script" &> /dev/null
+      git -C "$dir" push origin HEAD:main &> /dev/null
     fi
   done
-  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR add "$PARENT_DIR/." &> /dev/null
-  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR commit -m "Updated link scripts" &> /dev/null
-  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR push &> /dev/null
-  git --git-dir=$PARENT_DIR/.git --work-tree=$PARENT_DIR submodule update --remote --merge
-  exit 0
+  git -C "$PARENT_DIR" add . &> /dev/null
+  git -C "$PARENT_DIR" commit -m "Updated link scripts" &> /dev/null
+  git -C "$PARENT_DIR" push &> /dev/null
+  git -C "$PARENT_DIR" submodule update --remote --merge
 }
 
 useLinkerScripts() {
+  # Check if the 'stow' command exists
+  if ! command -v stow &> /dev/null; then
+    echo "Error: 'stow' command not found. Please install GNU Stow."
+    exit 1
+  fi
+
   export XDG_CONFIG_HOME=$HOME/.config
   export XDG_DATA_HOME=$HOME/.local
 
   case $host in
     "desktop" | "laptop" ) # check for configured hosts
     ./configurations $PARENT_DIR $host
-    if [ $? -eq 0 ]; then
-      echo
-      echo "Linked all packages successfully"
-    else
+    if [ $? -eq 1 ]; then
       echo "Error: Could not link some packages. Maybe check environment variables ?"
+      exit 1
     fi
-    exit 0;;
+    echo "Linked all packages successfully";;
     *) # error out if argument did not match any know hosts
       echo "Error: No configured host was provided"
       exit 1;;
   esac
+}
+
+createSubmodule() {
+  # Check if the `gh` command exists
+  if ! command -v gh &> /dev/null; then
+    echo "Error: 'gh' command not found. Please install the GitHub CLI."
+    exit 1
+  fi
+
+  # these environment variables might be required
+  export XDG_CONFIG_HOME=$HOME/.config
+  export XDG_DATA_HOME=$HOME/.local
+
+  # get the necessary information from the user
+  read -p "Please enter the name of the submodule: " submoduleName
+  read -p "Please enter a description for the submodule: " submoduleDescription 
+  echo "Please enter a valid configuration for the submodule. The current accepted configurations are:"
+  echo "    - default"
+  echo "    - desktop"
+  echo "    - laptop"
+  echo "    - file"
+  echo "    - sudo"
+  read -p "Configuration: " submoduleConfiguration
+  echo "Please enter a target for the files in the submodule. The target may contain environment variables, but no relative paths"
+  read -p "Target: " submoduleTarget
+
+  # create the submodule's remote repository.
+  gh repo create "$submoduleName" -d "$submoduleDescription" --public
+  echo
+  if [ $? -eq 1 ]; then
+    echo "Error: Could not create the remote repository. Are you connected to GitHub ?"
+    exit 1
+  fi
+
+  # Cloning in /tmp then adding the necessary files
+  temporarySubmodule=/tmp/temporary_submodule
+  rm -rf $temporarySubmodule
+  gh repo clone $submoduleName $temporarySubmodule
+  if [ $? -eq 1 ]; then
+    echo "Error: Could not clone the submodule repository. Does /tmp exist and do you have write permissions for it ?"
+    exit 1
+  fi
+  echo "Successfully cloned $submoduleName in $temporarySubmodule"
+  mkdir -p $temporarySubmodule/$submoduleConfiguration/$subModuleName
+  touch $temporarySubmodule/$submoduleConfiguration/$subModuleName/.gitkeep
+  echo "$submoduleTarget" > $temporarySubmodule/target.txt
+  \cp ./link $temporarySubmodule/
+  echo "# $submoduleName" > $temporarySubmodule/README.md
+  echo "$submoduleDescription" >> $temporarySubmodule/README.md
+  git -C $temporarySubmodule add .
+  git -C $temporarySubmodule commit -m "submodule initalization"
+  git -C $temporarySubmodule push -u origin main
+  if [ $? -eq 1 ]; then
+    exit 1
+  fi
+  rm -rf $temporarySubmodule
+
+  # finally adding the newly created repository as a submodule
+  submoduleURL=$(gh repo view $submoduleName | grep -o 'https://github.com/[^ ]*')
+  git -C "$PARENT_DIR" submodule add $submoduleURL
+  git -C "$PARENT_DIR" add .
+  git -C "$PARENT_DIR" commit -m "Added new $submoduleName submodule"
+  git -C "$PARENT_DIR" push
+  if [ $? -eq 1 ]; then
+    exit 1
+  fi
+  echo
+  echo "Successfully added the $submoduleName submodule"
 }
 
 # get the path to the script and the main directory (above the script)
@@ -64,7 +136,7 @@ PARENT_DIR=$(dirname "$SCRIPT_DIR")
 host=""
 
 # read the options
-while getopts ":h:c:l" option; do
+while getopts ":h:l:c:n" option; do
   case $option in
     h) # display help
       showHelp
@@ -73,17 +145,19 @@ while getopts ":h:c:l" option; do
       updateLink
       exit 0;;
     c) # choose configuration
-      host=$OPTARG;;
+      host=$OPTARG
+      if [ -n "$host" ]; then
+        useLinkerScripts
+      fi
+      exit 0;;
+    n) # create submodule
+      createSubmodule
+      exit 0;;
     \?) # invalid option
       echo "Error: Invalid option"
       exit 1;;
   esac
 done
-
-# set host
-if [ -n "$host" ]; then
-  useLinkerScripts
-fi
 
 # show help if no options have been passed in
 showHelp
