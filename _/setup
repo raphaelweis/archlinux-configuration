@@ -74,14 +74,6 @@ createSubmodule() {
   # get the necessary information from the user
   read -p "Please provide your github account username: " githubUsername
   read -p "Please enter the name of the submodule: " submoduleName
-  read -p "Please enter a description for the submodule: " submoduleDescription 
-  echo "Please enter a valid configuration for the submodule. The current accepted configurations are:"
-  echo "    - default"
-  echo "    - desktop"
-  echo "    - laptop"
-  echo "    - file"
-  echo "    - sudo"
-  read -p "Configuration: " submoduleConfiguration
   echo "Please enter a target for the files in the submodule. The target may contain environment variables, but no relative paths"
   read -p "Target: " submoduleTarget
 
@@ -102,8 +94,6 @@ createSubmodule() {
     exit 1
   fi
   echo "Successfully cloned $submoduleName in $temporarySubmodule"
-  mkdir -p $temporarySubmodule/$submoduleConfiguration/$subModuleName
-  touch $temporarySubmodule/$submoduleConfiguration/$subModuleName/.gitkeep
   echo "$submoduleTarget" > $temporarySubmodule/target.txt
   \cp ./link $temporarySubmodule/
   echo "# $submoduleName" > $temporarySubmodule/README.md
