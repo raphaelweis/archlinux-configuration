@@ -12,6 +12,7 @@ $PARENT_DIR/fish/link -c default
 $PARENT_DIR/git/link -c default
 $PARENT_DIR/gtk-3.0/link -c default
 $PARENT_DIR/hypr/link -c $host
+$PARENT_DIR/i3/link -c default
 $PARENT_DIR/ideavimrc/link -c file
 $PARENT_DIR/kitty/link -c default
 $PARENT_DIR/nvim/link -c default
