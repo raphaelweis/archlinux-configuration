@@ -72,6 +72,7 @@ createSubmodule() {
   export XDG_DATA_HOME=$HOME/.local
 
   # get the necessary information from the user
+  read -p "Please provide your github account username: " githubUsername
   read -p "Please enter the name of the submodule: " submoduleName
   read -p "Please enter a description for the submodule: " submoduleDescription 
   echo "Please enter a valid configuration for the submodule. The current accepted configurations are:"
@@ -116,7 +117,7 @@ createSubmodule() {
   rm -rf $temporarySubmodule
 
   # finally adding the newly created repository as a submodule
-  submoduleURL=$(gh repo view $submoduleName | grep -o 'https://github.com/[^ ]*')
+  submoduleURL="https://github.com/$githubUsername/$submoduleName.git"
   git -C "$PARENT_DIR" submodule add $submoduleURL
   git -C "$PARENT_DIR" add .
   git -C "$PARENT_DIR" commit -m "Added new $submoduleName submodule"
