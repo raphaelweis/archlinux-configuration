@@ -79,6 +79,3 @@
 [submodule "sddm-themes"]
 	path = sddm-themes
 	url = https://github.com/raphaelweis/sddm-themes.git
-[submodule "i333"]
-	path = i333
-	url = https://github.com/raphaelweis/i333.git
