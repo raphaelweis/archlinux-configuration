@@ -29,6 +29,7 @@ $PARENT_DIR/tmux/link -c default
 $PARENT_DIR/vimrc/link -c file
 $PARENT_DIR/waybar/link -c $host
 $PARENT_DIR/wayland-sessions/link -c sudo
+$PARENT_DIR/xorg.conf.d/link -c sudo
 $PARENT_DIR/xremap/link -c default
 $PARENT_DIR/zsh/link -c default
 $PARENT_DIR/zshenv/link -c file
