@@ -88,3 +88,6 @@
 [submodule "xorg.conf.d"]
 	path = xorg.conf.d
 	url = https://github.com/raphaelweis/xorg.conf.d.git
+[submodule "dwm"]
+	path = dwm
+	url = https://github.com/raphaelweis/dwm.git
