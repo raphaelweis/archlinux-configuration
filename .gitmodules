@@ -85,3 +85,6 @@
 [submodule "X11"]
 	path = X11
 	url = https://github.com/raphaelweis/X11.git
+[submodule "xorg.conf.d"]
+	path = xorg.conf.d
+	url = https://github.com/raphaelweis/xorg.conf.d.git
