@@ -3,6 +3,7 @@
 PARENT_DIR=$1
 host=$2
 
+$PARENT_DIR/X11/link -c file
 $PARENT_DIR/alacritty/link -c default
 $PARENT_DIR/apache/link -c sudo
 $PARENT_DIR/bash/link -c file
