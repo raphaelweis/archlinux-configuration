@@ -115,8 +115,11 @@ createSubmodule() {
   if [ $? -eq 1 ]; then
     exit 1
   fi
+
+  # update submodules to the latest commits, including the new one
+  git -C "$PARENT_DIR" submodule update --init --remote --merge
   echo
-  echo "Successfully added the $submoduleName submodule"
+  echo "Successfully added the $submoduleName submodule - Updated all submodules to the latest commit"
 }
 
 # get the path to the script and the main directory (above the script)
