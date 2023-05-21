@@ -82,3 +82,6 @@
 [submodule "i3"]
 	path = i3
 	url = https://github.com/raphaelweis/i3.git
+[submodule "X11"]
+	path = X11
+	url = https://github.com/raphaelweis/X11.git
