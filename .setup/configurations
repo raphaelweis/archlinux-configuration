@@ -25,6 +25,7 @@ $PARENT_DIR/sddm-themes/link -c sudo
 $PARENT_DIR/sddm.conf.d/link -c sudo
 $PARENT_DIR/starship/link -c default
 $PARENT_DIR/swaylock/link -c default
+$PARENT_DIR/swhkd/link -c sudo
 $PARENT_DIR/tmux/link -c default
 $PARENT_DIR/vimrc/link -c file
 $PARENT_DIR/waybar/link -c $host
