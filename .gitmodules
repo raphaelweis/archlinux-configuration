@@ -91,6 +91,3 @@
 [submodule "dwm"]
 	path = dwm
 	url = https://github.com/raphaelweis/dwm.git
-[submodule "swhkd"]
-	path = swhkd
-	url = https://github.com/raphaelweis/swhkd.git
